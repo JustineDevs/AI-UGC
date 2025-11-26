@@ -18,7 +18,7 @@ Templates Status:
 Follow-up Actions: None - all templates compatible with initial constitution
 -->
 
-# Zeely Constitution
+# Viral2Viral Constitution
 
 ## Core Principles
 

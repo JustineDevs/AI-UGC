@@ -54,8 +54,8 @@ Before you begin, ensure you have:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/zeely.git
-cd zeely
+git clone https://github.com/yourusername/viral2viral.git
+cd viral2viral
 ```
 
 ### 2. Install Backend Dependencies
