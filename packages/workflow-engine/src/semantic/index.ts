@@ -25,6 +25,47 @@ const nichePromptByKey: Record<string, string> = {
   "organic-social-proof": "niche.organic-social-proof",
 };
 
+const strategicPromptByNicheKey: Record<string, string[]> = {
+  "ecommerce-product-ads": [
+    "core.brand-story",
+    "core.social-strategy",
+    "core.video-structure",
+    "core.copy-optimization",
+    "core.creative-brief",
+    "core.visual-direction",
+  ],
+  "local-service-ads": [
+    "core.brand-story",
+    "core.social-strategy",
+    "core.video-structure",
+    "core.copy-optimization",
+    "core.creative-brief",
+  ],
+  "info-product-promos": [
+    "core.brand-story",
+    "core.social-strategy",
+    "core.video-structure",
+    "core.copy-optimization",
+    "core.creative-brief",
+  ],
+  "creator-testimonial-ads": [
+    "core.brand-story",
+    "core.creator-partnerships",
+    "core.social-strategy",
+    "core.video-structure",
+    "core.copy-optimization",
+    "core.visual-direction",
+  ],
+  "organic-social-proof": [
+    "core.brand-story",
+    "core.creator-partnerships",
+    "core.social-strategy",
+    "core.video-structure",
+    "core.copy-optimization",
+    "core.visual-direction",
+  ],
+};
+
 const providerPromptByKey: Record<string, string[]> = {
   laozhang: ["provider.laozhang-text", "provider.laozhang-video"],
   apimart: ["provider.apimart-text", "provider.apimart-video"],
@@ -51,6 +92,7 @@ export const buildSemanticBlueprintPlan = (input: {
   );
   const promptBlockIds = [
     "core.brand-voice",
+    ...(strategicPromptByNicheKey[input.nichePackKey || "ecommerce-product-ads"] || []),
     "core.hook",
     "core.proof",
     "core.cta",

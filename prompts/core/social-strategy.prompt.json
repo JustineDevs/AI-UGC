@@ -1,0 +1,27 @@
+{
+  "id": "core.social-strategy",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Social Strategy",
+  "purpose": "Push prompts toward platform-native engagement behavior, stronger hooks, and realistic social distribution logic.",
+  "required_inputs": ["channel", "audience"],
+  "blocks": {
+    "platform_native_rules": [
+      "respect the pacing, hook speed, and caption style of the target platform",
+      "optimize for short-form retention and shareability before polishing language"
+    ],
+    "engagement_loops": [
+      "include curiosity, reaction, contrast, or payoff moments early",
+      "favor comments, saves, rewatches, or shares over bland awareness language"
+    ],
+    "distribution_logic": [
+      "assume the viewer sees this among many competing posts",
+      "make the first seconds and the final CTA earn attention"
+    ]
+  },
+  "forbidden_patterns": [
+    "TV ad pacing",
+    "generic corporate social copy",
+    "slow setup before the hook"
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "id": "useful-ai-prompts-ai-ugc-curated",
+  "collection_id": "useful-ai-prompts",
+  "label": "AI-UGC Curated Subset",
+  "description": "Curated upstream prompts and skills from Useful AI Prompts that are most relevant to AI-UGC strategy, narrative development, creator partnerships, channel planning, and creative asset direction.",
+  "recommended_prompts": [
+    {
+      "slug": "integrated-campaign-architect",
+      "title": "Integrated Campaign Architect",
+      "category": "business/marketing",
+      "file_path": "prompts/business/marketing/integrated-campaign-architect.md",
+      "best_for": [
+        "campaign architecture",
+        "channel orchestration",
+        "offer distribution"
+      ],
+      "ai_ugc_usage": "Use before blueprint design when defining a multi-channel campaign rollout."
+    },
+    {
+      "slug": "marketing-manager-strategist",
+      "title": "Marketing Manager Strategist",
+      "category": "business/marketing",
+      "file_path": "prompts/business/marketing/marketing-manager-strategist.md",
+      "best_for": [
+        "campaign prioritization",
+        "go-to-market planning"
+      ],
+      "ai_ugc_usage": "Use for planning the marketing operating context around a workspace or project profile."
+    },
+    {
+      "slug": "audience-engagement-specialist",
+      "title": "Audience Engagement Specialist",
+      "category": "content creation",
+      "file_path": "prompts/content-creation/audience-engagement-specialist.md",
+      "best_for": [
+        "engagement tactics",
+        "community hooks",
+        "retention patterns"
+      ],
+      "ai_ugc_usage": "Use to sharpen hook and comment-bait patterns for short-form UGC outputs."
+    },
+    {
+      "slug": "brand-storytelling-expert",
+      "title": "Brand Storytelling Expert",
+      "category": "content creation",
+      "file_path": "prompts/content-creation/brand-storytelling-expert.md",
+      "best_for": [
+        "brand narrative",
+        "emotional positioning",
+        "story arcs"
+      ],
+      "ai_ugc_usage": "Use when defining premium or lifestyle narrative frames for brand-led UGC."
+    },
+    {
+      "slug": "content-calendar-architect",
+      "title": "Content Calendar Architect",
+      "category": "content creation",
+      "file_path": "prompts/content-creation/content-calendar-architect.md",
+      "best_for": [
+        "campaign sequencing",
+        "content cadence"
+      ],
+      "ai_ugc_usage": "Use to turn generated concepts into a recurring launch or creator-content cadence."
+    },
+    {
+      "slug": "copywriting-enhancement-expert",
+      "title": "Copywriting Enhancement Expert",
+      "category": "content creation",
+      "file_path": "prompts/content-creation/copywriting-enhancement-expert.md",
+      "best_for": [
+        "CTA polish",
+        "headline refinement",
+        "conversion language"
+      ],
+      "ai_ugc_usage": "Use after prompt generation to tighten conversion-oriented language without losing niche specificity."
+    },
+    {
+      "slug": "influencer-marketing-strategist",
+      "title": "Influencer Marketing Strategist",
+      "category": "content creation",
+      "file_path": "prompts/content-creation/influencer-marketing-strategist.md",
+      "best_for": [
+        "creator partnerships",
+        "UGC sourcing",
+        "rate guidance"
+      ],
+      "ai_ugc_usage": "Use when building creator-led or influencer-assisted UGC campaigns."
+    },
+    {
+      "slug": "social-media-strategy-optimizer",
+      "title": "Social Media Strategy Optimizer",
+      "category": "content creation",
+      "file_path": "prompts/content-creation/social-media-strategy-optimizer.md",
+      "best_for": [
+        "platform fit",
+        "channel optimization",
+        "posting strategy"
+      ],
+      "ai_ugc_usage": "Use to align channel targets in project profiles and output policies."
+    },
+    {
+      "slug": "storytelling-framework-designer",
+      "title": "Storytelling Framework Designer",
+      "category": "content creation",
+      "file_path": "prompts/content-creation/storytelling-framework-designer.md",
+      "best_for": [
+        "narrative structure",
+        "script skeletons"
+      ],
+      "ai_ugc_usage": "Use before composing final scripts for testimonials, founder stories, and problem-solution ads."
+    },
+    {
+      "slug": "video-content-creator",
+      "title": "Video Content Creator",
+      "category": "content creation",
+      "file_path": "prompts/content-creation/video-content-creator.md",
+      "best_for": [
+        "video strategy",
+        "format planning",
+        "production workflows"
+      ],
+      "ai_ugc_usage": "Use to define sustainable production rules and format choices for generated UGC programs."
+    },
+    {
+      "slug": "marketing-copy-creation-expert",
+      "title": "Marketing Copy Creation Expert",
+      "category": "creation",
+      "file_path": "prompts/creation/marketing-copy-creation-expert.md",
+      "best_for": [
+        "ad copy",
+        "offer copy",
+        "landing copy"
+      ],
+      "ai_ugc_usage": "Use to expand a generated campaign angle into paid-social or landing-page copy variants."
+    },
+    {
+      "slug": "brand-story-architect",
+      "title": "Brand Story Architect",
+      "category": "creative",
+      "file_path": "prompts/creative/brand-story-architect.md",
+      "best_for": [
+        "identity framing",
+        "premium positioning"
+      ],
+      "ai_ugc_usage": "Use when premium or editorial brand framing matters more than direct-response intensity."
+    },
+    {
+      "slug": "creative-brief-developer",
+      "title": "Creative Brief Developer",
+      "category": "creative",
+      "file_path": "prompts/creative/creative-brief-developer.md",
+      "best_for": [
+        "creative briefs",
+        "asset direction",
+        "team handoff"
+      ],
+      "ai_ugc_usage": "Use to turn a selected concept into a production-ready brief for creators or editors."
+    },
+    {
+      "slug": "marketing-campaign-creator",
+      "title": "Marketing Campaign Creator",
+      "category": "creative",
+      "file_path": "prompts/creative/marketing-campaign-creator.md",
+      "best_for": [
+        "campaign concepting",
+        "creative direction"
+      ],
+      "ai_ugc_usage": "Use when the project needs broader concept generation around a niche pack or offer."
+    },
+    {
+      "slug": "video-script-writer",
+      "title": "Video Script Writer",
+      "category": "creative",
+      "file_path": "prompts/creative/video-script-writer.md",
+      "best_for": [
+        "short-form scripting",
+        "scene sequencing"
+      ],
+      "ai_ugc_usage": "Use to turn prompt outputs into explicit UGC-style script drafts or shot flows."
+    },
+    {
+      "slug": "visual-concept-developer",
+      "title": "Visual Concept Developer",
+      "category": "creative",
+      "file_path": "prompts/creative/visual-concept-developer.md",
+      "best_for": [
+        "art direction",
+        "visual mood",
+        "frame language"
+      ],
+      "ai_ugc_usage": "Use when generated UGC needs stronger premium, editorial, or lifestyle visual direction."
+    }
+  ],
+  "recommended_skills": [
+    {
+      "slug": "user-persona-creation",
+      "file_path": "skills/user-persona-creation/SKILL.md",
+      "ai_ugc_usage": "Audience definition before workspace or project profile setup."
+    },
+    {
+      "slug": "user-research-analysis",
+      "file_path": "skills/user-research-analysis/SKILL.md",
+      "ai_ugc_usage": "Reference-source or audience-insight synthesis before blueprint creation."
+    },
+    {
+      "slug": "funnel-analysis",
+      "file_path": "skills/funnel-analysis/SKILL.md",
+      "ai_ugc_usage": "Offer and CTA alignment for conversion-focused UGC programs."
+    },
+    {
+      "slug": "interaction-design",
+      "file_path": "skills/interaction-design/SKILL.md",
+      "ai_ugc_usage": "Useful when adapting the web app UX around workspace, provider, and session flows."
+    }
+  ],
+  "suggested_usage_order": [
+    "brand-storytelling-expert",
+    "integrated-campaign-architect",
+    "social-media-strategy-optimizer",
+    "creative-brief-developer",
+    "video-script-writer"
+  ]
+}

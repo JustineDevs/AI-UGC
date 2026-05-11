@@ -8,3 +8,4 @@ export * from './runtime';
 export * from './prompt-assembly';
 export * from './moderation';
 export * from './output-policy';
+export * from './collections';

@@ -2,6 +2,10 @@ import { buildModerationPolicy } from '../moderation';
 import { buildOutputPolicy } from '../output-policy';
 import { buildPromptAssemblyConfig } from '../prompt-assembly';
 import { buildSemanticPromptBundle } from '../compose';
+import {
+  getPromptCollection,
+  listCuratedCollectionPrompts,
+} from '../collections';
 import { reviseSemanticPrompt, scoreSemanticPrompt } from '../runtime';
 import { loadSkillContract, parseDeclaredSteps, parsePolicyRules } from '../runtime/contracts';
 
@@ -23,6 +27,8 @@ describe('workflow engine composition helpers', () => {
     });
 
     expect(bundle.promptText).toContain('Template:');
+    expect(bundle.promptText).toContain('[core.brand-story] Brand Story');
+    expect(bundle.promptText).toContain('[core.social-strategy] Social Strategy');
     expect(bundle.promptMetadata.promptBlockIds.length).toBeGreaterThan(0);
     expect(bundle.promptMetadata.skillIds).toContain('compose-prompt');
   });
@@ -64,5 +70,14 @@ describe('workflow engine composition helpers', () => {
     expect(contract.policyRules.length).toBeGreaterThan(0);
     expect(contract.declaredSteps.length).toBeGreaterThan(0);
     expect(contract.definition.id).toBe('compose-prompt');
+  });
+
+  it('exposes the vendored useful-ai-prompts collection and curated subset', () => {
+    const collection = getPromptCollection('useful-ai-prompts');
+    const curatedPrompts = listCuratedCollectionPrompts('useful-ai-prompts');
+
+    expect(collection?.source.repository).toBe('aj-geddes/useful-ai-prompts');
+    expect(collection?.resource_counts.prompts).toBeGreaterThan(500);
+    expect(curatedPrompts.some((prompt) => prompt.slug === 'video-content-creator')).toBe(true);
   });
 });

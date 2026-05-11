@@ -1,0 +1,27 @@
+{
+  "id": "core.creator-partnerships",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Creator Partnerships",
+  "purpose": "Guide creator-led or influencer-assisted UGC so the output feels authentic, platform-native, and brand-aligned.",
+  "required_inputs": ["audience", "channel"],
+  "blocks": {
+    "creator_fit": [
+      "speak from the perspective of a creator who would naturally use the product",
+      "match the creator tone to the audience's expectations and platform norms"
+    ],
+    "authenticity_rules": [
+      "keep sponsorship cues believable and specific",
+      "show lived-in usage or lifestyle fit instead of polished endorsement language"
+    ],
+    "partnership_output": [
+      "favor creator-native framing, reactions, demos, and social proof",
+      "keep the brand visible without making the script sound like a press release"
+    ]
+  },
+  "forbidden_patterns": [
+    "celebrity-style sponsorship tone",
+    "corporate brand spokesperson language",
+    "overproduced testimonial copy"
+  ]
+}

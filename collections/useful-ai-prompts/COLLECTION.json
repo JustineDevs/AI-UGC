@@ -1,0 +1,39 @@
+{
+  "id": "useful-ai-prompts",
+  "label": "Useful AI Prompts",
+  "version": "upstream-main",
+  "source": {
+    "repository": "aj-geddes/useful-ai-prompts",
+    "url": "https://github.com/aj-geddes/useful-ai-prompts",
+    "license": "MIT",
+    "commit": "3f5182cfd739fc113f4af5244a1cf342ad7f7911",
+    "fetched_at": "2026-05-11T00:00:00Z"
+  },
+  "resource_counts": {
+    "prompts": 679,
+    "skills": 259,
+    "hooks": 7,
+    "system_prompts": 1
+  },
+  "integration_mode": "vendored-external-reference",
+  "runtime_integration": {
+    "auto_loaded_by_workflow_engine": false,
+    "repo_owned_runtime_surfaces": [
+      "prompts/",
+      "skills/"
+    ],
+    "bridge_manifest": "AI-UGC-CURATED.json"
+  },
+  "paths": {
+    "prompt_index": "PROMPT-INDEX.json",
+    "prompts": "prompts/",
+    "skills": "skills/",
+    "hooks": "hooks/",
+    "system_prompts": "system-prompts/"
+  },
+  "notes": [
+    "This collection keeps upstream markdown and Claude-skill formats intact.",
+    "Use the curated manifest to discover the AI-UGC-relevant subset first.",
+    "Do not wire this collection directly into the strict JSON runtime catalog without adaptation."
+  ]
+}

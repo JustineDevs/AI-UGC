@@ -1,0 +1,28 @@
+{
+  "id": "core.brand-story",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Brand Story",
+  "purpose": "Frame the product or offer inside a memorable brand narrative with a clear emotional arc and differentiated reason to care.",
+  "required_inputs": ["product_name", "offer_details", "audience"],
+  "blocks": {
+    "narrative_goal": [
+      "show why the brand matters beyond features",
+      "connect the product to a lifestyle, identity, or transformation"
+    ],
+    "emotional_arc": [
+      "start from a relatable tension or desire",
+      "show the meaningful shift after using the product",
+      "end with a believable invitation, not generic hype"
+    ],
+    "differentiation_focus": [
+      "highlight what makes this offer feel distinct in its niche",
+      "avoid brand language that could apply to any product"
+    ]
+  },
+  "forbidden_patterns": [
+    "generic founder myth",
+    "vague inspirational language",
+    "empty mission statements"
+  ]
+}

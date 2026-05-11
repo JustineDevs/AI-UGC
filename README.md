@@ -84,6 +84,13 @@ Maintainer-facing extension docs:
 - [packages/provider-core/README.md](packages/provider-core/README.md)
 - [tooling/fixtures/README.md](tooling/fixtures/README.md)
 
+## External Collections
+
+AI-UGC can also vendor external prompt and skill libraries without merging them
+into the strict runtime catalog. The current imported collection is:
+
+- [collections/useful-ai-prompts](collections/useful-ai-prompts)
+
 ## API Contract
 
 The active platform contract lives at:

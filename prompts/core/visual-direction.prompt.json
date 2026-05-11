@@ -1,0 +1,27 @@
+{
+  "id": "core.visual-direction",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Visual Direction",
+  "purpose": "Strengthen the visual concept behind generated UGC with clearer composition, mood, styling, and detail emphasis.",
+  "required_inputs": ["channel", "product_description"],
+  "blocks": {
+    "composition_rules": [
+      "call out framing, subject emphasis, and scene-level visual hierarchy",
+      "make the product or transformation visually legible"
+    ],
+    "mood_direction": [
+      "define a clear aesthetic mood rather than generic 'high quality' language",
+      "align lighting, texture, and color choices with the niche and brand"
+    ],
+    "detail_focus": [
+      "show tactile details, proof moments, or lifestyle context that make the output feel real",
+      "use concrete visual references instead of abstract beauty words"
+    ]
+  },
+  "forbidden_patterns": [
+    "flat generic studio look",
+    "visual instructions with no product focus",
+    "style adjectives without concrete image cues"
+  ]
+}

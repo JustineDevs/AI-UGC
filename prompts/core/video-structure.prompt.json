@@ -1,0 +1,27 @@
+{
+  "id": "core.video-structure",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Video Structure",
+  "purpose": "Shape prompt outputs into strong short-form video beats with clear scene logic, retention flow, and payoff structure.",
+  "required_inputs": ["channel", "source_analysis"],
+  "blocks": {
+    "hook_window": [
+      "land the visual or verbal hook inside the first 1-3 seconds",
+      "open with the strongest pattern interrupt or outcome preview"
+    ],
+    "retention_beats": [
+      "alternate proof, payoff, or curiosity moments so the video keeps moving",
+      "remove filler transitions and non-essential setup"
+    ],
+    "scene_arc": [
+      "give each section a role such as hook, tension, proof, reveal, or CTA",
+      "end on a clear action, belief shift, or emotional payoff"
+    ]
+  },
+  "forbidden_patterns": [
+    "scene repetition without progression",
+    "long exposition",
+    "weak ending with no payoff"
+  ]
+}

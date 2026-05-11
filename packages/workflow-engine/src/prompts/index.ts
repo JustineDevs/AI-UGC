@@ -13,10 +13,17 @@ import blueprintToPrompt from "../../../../prompts/transforms/blueprint-to-promp
 import profileToPrompt from "../../../../prompts/transforms/profile-to-prompt.prompt.json";
 import analysisToPrompt from "../../../../prompts/transforms/analysis-to-prompt.prompt.json";
 import brandVoice from "../../../../prompts/core/brand-voice.prompt.json";
+import brandStory from "../../../../prompts/core/brand-story.prompt.json";
+import creatorPartnerships from "../../../../prompts/core/creator-partnerships.prompt.json";
 import cta from "../../../../prompts/core/cta.prompt.json";
+import creativeBrief from "../../../../prompts/core/creative-brief.prompt.json";
+import copyOptimization from "../../../../prompts/core/copy-optimization.prompt.json";
 import hook from "../../../../prompts/core/hook.prompt.json";
 import proof from "../../../../prompts/core/proof.prompt.json";
+import socialStrategy from "../../../../prompts/core/social-strategy.prompt.json";
 import style from "../../../../prompts/core/style.prompt.json";
+import videoStructure from "../../../../prompts/core/video-structure.prompt.json";
+import visualDirection from "../../../../prompts/core/visual-direction.prompt.json";
 import ecommerceNiche from "../../../../prompts/niches/ecommerce-product-ads.prompt.json";
 import localServicesNiche from "../../../../prompts/niches/local-services.prompt.json";
 import infoProductsNiche from "../../../../prompts/niches/info-products.prompt.json";
@@ -58,10 +65,17 @@ export interface PromptBlockDefinition {
 
 export const promptCatalog = [
   brandVoice,
+  brandStory,
+  creatorPartnerships,
   hook,
   cta,
+  creativeBrief,
+  copyOptimization,
   proof,
+  socialStrategy,
   style,
+  videoStructure,
+  visualDirection,
   ecommerceNiche,
   localServicesNiche,
   infoProductsNiche,

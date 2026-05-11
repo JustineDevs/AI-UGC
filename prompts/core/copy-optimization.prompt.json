@@ -1,0 +1,27 @@
+{
+  "id": "core.copy-optimization",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Copy Optimization",
+  "purpose": "Refine marketing language so prompts produce tighter hooks, better proof, and more believable conversion copy.",
+  "required_inputs": ["offer_details", "brand_voice"],
+  "blocks": {
+    "headline_logic": [
+      "favor specificity over generic intensity",
+      "make the promise easy to understand on first read"
+    ],
+    "proof_language": [
+      "back claims with sensory, practical, or social proof cues",
+      "make testimonials and benefit statements feel observed, not invented"
+    ],
+    "cta_rules": [
+      "use one direct CTA aligned with the offer",
+      "keep urgency believable and tied to a real reason"
+    ]
+  },
+  "forbidden_patterns": [
+    "all-caps hype language",
+    "vague benefits",
+    "multiple competing CTAs"
+  ]
+}

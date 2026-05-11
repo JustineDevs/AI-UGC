@@ -1,0 +1,25 @@
+{
+  "id": "core.creative-brief",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Creative Brief",
+  "purpose": "Turn a concept into a production-ready brief with clear audience, visual, message, and asset guidance.",
+  "required_inputs": ["audience", "offer_details", "channel"],
+  "blocks": {
+    "brief_sections": [
+      "target audience and buying context",
+      "single core message and supporting proof",
+      "tone and visual references",
+      "must-show assets and CTA outcome"
+    ],
+    "handoff_rules": [
+      "make the direction clear enough for creators, editors, or generators",
+      "keep the brief concrete and avoid abstract brand-speak"
+    ]
+  },
+  "forbidden_patterns": [
+    "briefs without a clear audience",
+    "visual direction with no message priorities",
+    "production notes that contradict the platform format"
+  ]
+}
