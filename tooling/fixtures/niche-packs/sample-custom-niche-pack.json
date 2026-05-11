@@ -1,0 +1,24 @@
+{
+  "key": "custom-pet-grooming-offers",
+  "version": "1.0.0",
+  "label": "Pet Grooming Offers",
+  "description": "Custom AI-UGC workflow for local pet grooming promotions.",
+  "defaultChannelTargets": [
+    "instagram-reels",
+    "tiktok"
+  ],
+  "requiredAssetTypes": [
+    "ugc_reference",
+    "brand_guide",
+    "product_image"
+  ],
+  "intakeSchemaRef": "custom/intake-schema.json",
+  "promptModuleRefs": [
+    "hook",
+    "service-proof",
+    "offer",
+    "cta"
+  ],
+  "outputPolicyRef": "custom/output-policy.json",
+  "status": "active"
+}

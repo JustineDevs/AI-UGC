@@ -1,0 +1,26 @@
+# Ralph Context Snapshot
+
+- Task statement: Implement the remaining production-grade gaps focused on live Postgres repository tests, stronger auth/workspace isolation, and stronger observability/audit.
+- Desired outcome: The AI-UGC stack proves real Postgres-backed persistence under tests, enforces a non-trivial workspace access model, and records structured audit/observability artifacts across critical runtime operations.
+- Known facts/evidence:
+  - The repo now has a monorepo foundation, semantic prompt/skill system, skill-chain runtime, machine-readable policy/step contracts, and Postgres-capable persistence adapter.
+  - `pnpm typecheck` is green after the latest runtime and persistence changes.
+  - SQLite fallback and Postgres URL support both exist in `apps/api/src/infrastructure/database/database.ts`.
+  - `WorkspaceOwnerGuard` is still a permissive stub.
+  - Observability exists only as minimal audit event helpers and a thin provider-job audit service.
+- Constraints:
+  - Must preserve current green build/typecheck/test baseline or improve it.
+  - Must use `apply_patch` for manual edits.
+  - Network is restricted, so tests must rely on local Postgres via docker-compose or environment if available.
+- Unknowns/open questions:
+  - Whether Docker-backed Postgres is available in this environment for live repository tests.
+  - How much auth/workspace isolation can be strengthened without introducing a full user management system in one pass.
+- Likely codebase touchpoints:
+  - `apps/api/src/infrastructure/database/**`
+  - `apps/api/src/infrastructure/persistence/**`
+  - `apps/api/src/common/guards/**`
+  - `apps/api/src/common/observability/**`
+  - `apps/api/src/modules/**`
+  - `tooling/scripts/**`
+  - `docker-compose.yml`
+  - `.env.example`

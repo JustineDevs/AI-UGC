@@ -1,0 +1,8 @@
+{
+  "steps": [
+    { "id": "validate-provider-and-assets", "description": "Validate selected provider and input assets." },
+    { "id": "assemble-provider-payload", "description": "Assemble provider payload." },
+    { "id": "submit-generation-request", "description": "Submit request." },
+    { "id": "return-provider-job", "description": "Return normalized provider-job record." }
+  ]
+}

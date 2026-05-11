@@ -1,0 +1,13 @@
+{
+  "id": "core.brand-voice",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Brand Voice",
+  "purpose": "Inject brand tone, vocabulary, and message discipline into every AI-UGC output.",
+  "required_inputs": ["brand_voice", "audience"],
+  "blocks": {
+    "voice_style": ["specific", "credible", "creator-native"],
+    "must_preserve": ["brand tone", "audience fit", "offer consistency"]
+  },
+  "forbidden_patterns": ["generic hype", "brand drift", "tone mismatch"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "niche.creator-testimonials",
+  "version": "1.0.0",
+  "type": "niche",
+  "label": "Creator Testimonials",
+  "purpose": "Generate creator-native testimonial and recommendation AI-UGC.",
+  "required_inputs": ["product_name", "brand_voice", "target_audience"],
+  "blocks": {
+    "angles": ["routine integration", "personal proof", "creator recommendation"]
+  },
+  "forbidden_patterns": ["stiff spokesperson tone"]
+}

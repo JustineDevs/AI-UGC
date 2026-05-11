@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["selected_provider", "prompt_text", "assets"],
+  "properties": {
+    "selected_provider": { "type": "string" },
+    "prompt_text": { "type": "string" },
+    "assets": { "type": "array", "items": { "type": "object" } }
+  }
+}

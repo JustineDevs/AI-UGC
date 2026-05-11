@@ -1,0 +1,19 @@
+{
+  "id": "template.15s-ugc-ad",
+  "version": "1.0.0",
+  "type": "template",
+  "label": "15s UGC Ad",
+  "purpose": "Assemble a 15-second AI-UGC ad prompt from semantic blocks.",
+  "assembly_order": [
+    "core.hook",
+    "core.brand-voice",
+    "core.proof",
+    "niche.ecommerce-product-ads",
+    "channel.tiktok",
+    "guard.claim-safety",
+    "guard.anti-generic",
+    "provider.laozhang-video",
+    "core.cta"
+  ],
+  "output_format": "single_prompt_text"
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["job_status"],
+  "properties": {
+    "job_status": { "type": "object" }
+  }
+}

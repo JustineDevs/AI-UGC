@@ -1,0 +1,11 @@
+{
+  "id": "score.compliance",
+  "version": "1.0.0",
+  "type": "scoring",
+  "label": "Compliance Score",
+  "purpose": "Judge whether output respects claims and safety constraints.",
+  "required_inputs": ["prompt_text", "claims_policy"],
+  "output_rules": {
+    "scores": ["0-100 compliance", "violations", "safe rewrites"]
+  }
+}

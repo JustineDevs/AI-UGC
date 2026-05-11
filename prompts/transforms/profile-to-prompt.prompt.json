@@ -1,0 +1,11 @@
+{
+  "id": "transform.profile-to-prompt",
+  "version": "1.0.0",
+  "type": "transform",
+  "label": "Profile To Prompt",
+  "purpose": "Inject project profile and campaign inputs into prompt assembly.",
+  "required_inputs": ["project_profile", "campaign_inputs"],
+  "blocks": {
+    "transform_rules": ["map audience", "map offer", "map brand voice"]
+  }
+}

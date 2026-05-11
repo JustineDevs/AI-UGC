@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "id": "revised-prompt-present",
+      "path": "revised_prompt_text",
+      "operator": "nonEmptyString",
+      "message": "revised prompt text must be present"
+    }
+  ]
+}

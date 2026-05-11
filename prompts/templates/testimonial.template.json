@@ -1,0 +1,17 @@
+{
+  "id": "template.testimonial",
+  "version": "1.0.0",
+  "type": "template",
+  "label": "Testimonial",
+  "purpose": "Assemble a creator-style testimonial AI-UGC prompt.",
+  "assembly_order": [
+    "core.hook",
+    "core.proof",
+    "niche.creator-testimonials",
+    "channel.reels",
+    "guard.claim-safety",
+    "provider.laozhang-video",
+    "core.cta"
+  ],
+  "output_format": "single_prompt_text"
+}

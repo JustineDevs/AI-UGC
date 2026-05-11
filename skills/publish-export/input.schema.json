@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["provider_job", "quality_scores", "output_asset"],
+  "properties": {
+    "provider_job": { "type": "object" },
+    "quality_scores": { "type": "object" },
+    "output_asset": { "type": "object" }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "id": "prompt-text-present",
+      "path": "prompt_text",
+      "operator": "nonEmptyString",
+      "message": "prompt text must be non-empty"
+    },
+    {
+      "id": "prompt-metadata-present",
+      "path": "prompt_metadata",
+      "operator": "object",
+      "message": "prompt metadata must exist"
+    }
+  ]
+}

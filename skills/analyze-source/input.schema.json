@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["source_asset", "niche", "channel"],
+  "properties": {
+    "source_asset": { "type": "object" },
+    "niche": { "type": "string" },
+    "channel": { "type": "string" }
+  }
+}

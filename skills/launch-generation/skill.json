@@ -1,0 +1,12 @@
+{
+  "id": "launch-generation",
+  "version": "1.0.0",
+  "label": "Launch Generation",
+  "purpose": "Submit the prepared prompt and assets to the selected provider.",
+  "required_inputs": ["selected_provider", "prompt_text", "assets"],
+  "produces": ["provider_job"],
+  "allowed_prompt_types": ["provider", "template"],
+  "depends_on": ["compose-prompt", "route-provider", "validate-claims"],
+  "supported_providers": ["laozhang", "apimart", "sample-provider"],
+  "retry_policy": { "max_retries": 2, "fallback_skill": "route-provider" }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "revise-output",
+  "version": "1.0.0",
+  "label": "Revise Output",
+  "purpose": "Regenerate or refine low-quality prompt drafts from scoring feedback.",
+  "required_inputs": ["prompt_text", "revision_recommendations", "workflow_blueprint"],
+  "produces": ["revised_prompt_text"],
+  "allowed_prompt_types": ["transform", "guard", "template", "scoring"],
+  "depends_on": ["score-output"],
+  "supported_providers": ["laozhang", "apimart", "sample-provider"],
+  "retry_policy": { "max_retries": 2 }
+}

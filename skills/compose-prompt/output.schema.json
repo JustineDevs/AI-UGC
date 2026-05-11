@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["prompt_text", "prompt_metadata"],
+  "properties": {
+    "prompt_text": { "type": "string" },
+    "prompt_metadata": { "type": "object" }
+  }
+}

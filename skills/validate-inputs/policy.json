@@ -1,0 +1,18 @@
+{
+  "rules": [
+    {
+      "id": "validation-passed",
+      "path": "validation_result.valid",
+      "operator": "equals",
+      "value": true,
+      "message": "validation must pass"
+    },
+    {
+      "id": "no-missing-fields",
+      "path": "validation_result.missingFields",
+      "operator": "arrayMax",
+      "value": 0,
+      "message": "no missing fields are allowed"
+    }
+  ]
+}

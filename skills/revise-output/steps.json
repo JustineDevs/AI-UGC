@@ -1,0 +1,7 @@
+{
+  "steps": [
+    { "id": "read-revision-signals", "description": "Read score failures and revision hints." },
+    { "id": "reassemble-prompt", "description": "Reassemble the prompt with corrected emphasis." },
+    { "id": "return-revised-prompt", "description": "Return a revised prompt draft." }
+  ]
+}

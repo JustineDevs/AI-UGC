@@ -1,0 +1,11 @@
+{
+  "id": "score.specificity",
+  "version": "1.0.0",
+  "type": "scoring",
+  "label": "Specificity Score",
+  "purpose": "Judge whether the output is niche-specific instead of generic.",
+  "required_inputs": ["prompt_text", "niche"],
+  "output_rules": {
+    "scores": ["0-100 specificity", "missing specifics", "rewrite hints"]
+  }
+}

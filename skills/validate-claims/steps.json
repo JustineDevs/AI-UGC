@@ -1,0 +1,7 @@
+{
+  "steps": [
+    { "id": "load-claims-policy", "description": "Load claims and forbidden-term policy." },
+    { "id": "scan-prompt-for-violations", "description": "Scan prompt text for prohibited patterns." },
+    { "id": "return-claim-validation", "description": "Return violations and safe replacement guidance." }
+  ]
+}

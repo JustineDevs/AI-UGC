@@ -1,0 +1,11 @@
+{
+  "id": "score.realism",
+  "version": "1.0.0",
+  "type": "scoring",
+  "label": "UGC Realism Score",
+  "purpose": "Judge whether the output feels native and creator-realistic.",
+  "required_inputs": ["prompt_text", "channel"],
+  "output_rules": {
+    "scores": ["0-100 realism", "short reasons", "revision hints"]
+  }
+}

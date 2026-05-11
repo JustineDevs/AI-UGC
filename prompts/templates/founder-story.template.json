@@ -1,0 +1,16 @@
+{
+  "id": "template.founder-story",
+  "version": "1.0.0",
+  "type": "template",
+  "label": "Founder Story",
+  "purpose": "Assemble a founder-led AI-UGC narrative prompt.",
+  "assembly_order": [
+    "core.brand-voice",
+    "core.hook",
+    "niche.info-products",
+    "channel.youtube-shorts",
+    "guard.brand-safety",
+    "provider.apimart-text"
+  ],
+  "output_format": "single_prompt_text"
+}

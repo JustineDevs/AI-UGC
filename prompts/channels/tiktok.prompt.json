@@ -1,0 +1,12 @@
+{
+  "id": "channel.tiktok",
+  "version": "1.0.0",
+  "type": "channel",
+  "label": "TikTok",
+  "purpose": "Adapt prompts to TikTok pacing, hook speed, and visual grammar.",
+  "required_inputs": ["duration_seconds"],
+  "blocks": {
+    "timing": ["hook inside 3 seconds", "vertical 9:16", "caption-friendly phrasing"],
+    "pacing": ["fast cuts", "native rhythm"]
+  }
+}

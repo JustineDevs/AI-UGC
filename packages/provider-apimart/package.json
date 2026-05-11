@@ -1,0 +1,12 @@
+{
+  "name": "@ai-ugc/provider-apimart",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@ai-ugc/config": "workspace:*",
+    "@ai-ugc/provider-core": "workspace:*",
+    "axios": "^1.6.0"
+  }
+}

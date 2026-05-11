@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["workflow_blueprint", "project_profile", "campaign_inputs"],
+  "properties": {
+    "workflow_blueprint": { "type": "object" },
+    "project_profile": { "type": "object" },
+    "campaign_inputs": { "type": "object" }
+  }
+}

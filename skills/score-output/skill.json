@@ -1,0 +1,12 @@
+{
+  "id": "score-output",
+  "version": "1.0.0",
+  "label": "Score Output",
+  "purpose": "Evaluate generated AI-UGC for realism, specificity, brand alignment, and compliance.",
+  "required_inputs": ["prompt_text", "project_profile", "niche", "channel"],
+  "produces": ["quality_scores", "revision_recommendations"],
+  "allowed_prompt_types": ["scoring", "guard"],
+  "depends_on": ["compose-prompt", "validate-claims"],
+  "supported_providers": ["laozhang", "apimart", "sample-provider"],
+  "retry_policy": { "max_retries": 1, "fallback_skill": "revise-output" }
+}

@@ -1,0 +1,28 @@
+# Ralph Context Snapshot
+
+- Task statement: Implement all remaining tasks for the AI-UGC transformation plan and verify the result.
+- Desired outcome: The repo operates as an AI-UGC monorepo with apps, shared packages, provider portability, workflow customization scaffolding, updated docs, and task/checklist state reflecting completed work.
+- Known facts/evidence:
+  - `specs/002-ai-ugc-template-platform/tasks.md` exists and currently has 22 tasks marked complete, 27 remaining.
+  - `apps/api`, `apps/web`, and `packages/*` scaffolding now exist.
+  - Provider adapter scaffolding for LaoZhang and APIMart exists.
+  - Provider validation/profile API module exists in `apps/api/src/modules/providers`.
+  - Root workspace files (`pnpm-workspace.yaml`, `turbo.json`, `tsconfig.base.json`, `docker-compose.yml`) exist.
+  - The semantic checklist is incomplete, but the user explicitly approved proceeding anyway.
+- Constraints:
+  - Must preserve user changes and avoid destructive git actions.
+  - Network access is restricted; installing dependencies or running provider integrations may require escalation or remain unverified.
+  - Apply_patch must be used for manual file edits.
+  - Final completion requires honest verification evidence; do not claim unfinished tasks as done.
+- Unknowns/open questions:
+  - Whether full dependency installation/build/test is possible in the sandbox.
+  - Whether all remaining story implementations can be completed in a single Ralph iteration without further clarification.
+  - Whether live provider validation can run without real credentials.
+- Likely codebase touchpoints:
+  - `apps/api/src/**`
+  - `apps/web/src/**`
+  - `packages/**`
+  - `tooling/scripts/**`
+  - `docs/**`
+  - `README.md`, `README-SETUP.md`, `.env.example`
+  - `specs/002-ai-ugc-template-platform/tasks.md`

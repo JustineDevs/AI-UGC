@@ -38,6 +38,12 @@ Thumbs.db
 coverage/
 *.test.js
 .nyc_output/
+apps/*/dist/
+apps/*/coverage/
+packages/*/dist/
+packages/*/coverage/
+.turbo/
+pnpm-lock.yaml
 
 # Temporary files
 *.tmp

@@ -1,0 +1,8 @@
+{
+  "steps": [
+    { "id": "read-job-metadata", "description": "Read provider job metadata." },
+    { "id": "inspect-provider-status", "description": "Poll or inspect provider status." },
+    { "id": "normalize-status", "description": "Normalize status transitions." },
+    { "id": "return-job-status", "description": "Return current or terminal state." }
+  ]
+}

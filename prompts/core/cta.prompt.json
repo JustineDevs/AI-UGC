@@ -1,0 +1,12 @@
+{
+  "id": "core.cta",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Call To Action",
+  "purpose": "Define the closing action and conversion framing.",
+  "required_inputs": ["offer_details", "cta_policy"],
+  "blocks": {
+    "cta_style": ["single direct CTA", "believable urgency", "clear next step"]
+  },
+  "forbidden_patterns": ["multiple CTAs", "spammy urgency"]
+}

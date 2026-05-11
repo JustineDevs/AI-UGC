@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["capability_type", "routing_policy", "provider_registry"],
+  "properties": {
+    "capability_type": { "type": "string" },
+    "routing_policy": { "type": "object" },
+    "provider_registry": { "type": "object" }
+  }
+}

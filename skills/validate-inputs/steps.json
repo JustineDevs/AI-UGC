@@ -1,0 +1,7 @@
+{
+  "steps": [
+    { "id": "load-required-blueprint-fields", "description": "Load blueprint-required fields." },
+    { "id": "compare-project-and-campaign-inputs", "description": "Compare project and campaign inputs." },
+    { "id": "return-validation-result", "description": "Return pass/fail plus missing or invalid field details." }
+  ]
+}

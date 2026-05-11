@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["selected_provider", "provider_reasoning"],
+  "properties": {
+    "selected_provider": { "type": "string" },
+    "provider_reasoning": { "type": "object" }
+  }
+}

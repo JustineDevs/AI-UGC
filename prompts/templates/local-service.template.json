@@ -1,0 +1,17 @@
+{
+  "id": "template.local-service",
+  "version": "1.0.0",
+  "type": "template",
+  "label": "Local Service",
+  "purpose": "Assemble a local-service AI-UGC lead-generation prompt.",
+  "assembly_order": [
+    "core.hook",
+    "core.brand-voice",
+    "niche.local-services",
+    "channel.meta-ads",
+    "guard.brand-safety",
+    "provider.apimart-video",
+    "core.cta"
+  ],
+  "output_format": "single_prompt_text"
+}

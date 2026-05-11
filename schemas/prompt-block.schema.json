@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI-UGC Prompt Block",
+  "type": "object",
+  "required": ["id", "version", "type", "label", "purpose"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": ["core", "niche", "channel", "provider", "guard", "transform", "scoring", "template"]
+    },
+    "label": { "type": "string" },
+    "purpose": { "type": "string" },
+    "required_inputs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "blocks": { "type": "object", "additionalProperties": true },
+    "forbidden_patterns": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "output_rules": { "type": "object", "additionalProperties": true },
+    "assembly_order": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "output_format": { "type": "string" }
+  },
+  "additionalProperties": true
+}

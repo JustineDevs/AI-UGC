@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "categories": [
+    "core",
+    "niches",
+    "channels",
+    "providers",
+    "guards",
+    "transforms",
+    "scoring",
+    "templates"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "rules": [
+    {
+      "id": "quality-scores-present",
+      "path": "quality_scores",
+      "operator": "object",
+      "message": "quality scores must exist"
+    },
+    {
+      "id": "overall-score-minimum",
+      "path": "quality_scores.overall",
+      "operator": "minimum",
+      "value": 0,
+      "message": "overall score must be numeric"
+    }
+  ]
+}

@@ -1,0 +1,587 @@
+openapi: 3.0.3
+info:
+  title: AI-UGC Template Platform API
+  version: 0.1.0
+  description: |
+    Public API contract for the transformed AI-UGC template platform.
+
+    Goals:
+    - create niche-specific workspaces and project profiles
+    - configure LaoZhang or APIMart through one provider abstraction
+    - execute configurable AI-UGC generation sessions
+    - keep a consistent response envelope independent of provider
+servers:
+  - url: http://localhost:3000/api
+    description: Local development
+
+tags:
+  - name: Workspaces
+  - name: Providers
+  - name: Blueprints
+  - name: Projects
+  - name: Sessions
+
+paths:
+  /workspaces:
+    post:
+      tags: [Workspaces]
+      summary: Create a workspace template
+      operationId: createWorkspace
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateWorkspaceRequest'
+      responses:
+        '201':
+          description: Workspace created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkspaceResponse'
+
+  /providers/validate:
+    post:
+      tags: [Providers]
+      summary: Validate provider credentials and capabilities
+      operationId: validateProvider
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ValidateProviderRequest'
+      responses:
+        '200':
+          description: Provider validated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProviderValidationResponse'
+        '422':
+          description: Provider invalid or unsupported
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /workspaces/{workspaceId}/providers:
+    post:
+      tags: [Providers]
+      summary: Register or update a provider profile for a workspace
+      operationId: upsertProviderProfile
+      parameters:
+        - $ref: '#/components/parameters/WorkspaceId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpsertProviderProfileRequest'
+      responses:
+        '200':
+          description: Provider saved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProviderProfileResponse'
+
+  /workspaces/{workspaceId}/blueprints:
+    post:
+      tags: [Blueprints]
+      summary: Create a workflow blueprint
+      operationId: createBlueprint
+      parameters:
+        - $ref: '#/components/parameters/WorkspaceId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateBlueprintRequest'
+      responses:
+        '201':
+          description: Blueprint created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlueprintResponse'
+
+  /workspaces/{workspaceId}/projects:
+    post:
+      tags: [Projects]
+      summary: Create a project profile for a niche/campaign
+      operationId: createProject
+      parameters:
+        - $ref: '#/components/parameters/WorkspaceId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateProjectRequest'
+      responses:
+        '201':
+          description: Project created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProjectResponse'
+
+  /projects/{projectId}/sessions:
+    post:
+      tags: [Sessions]
+      summary: Start a generation session
+      operationId: createSession
+      parameters:
+        - $ref: '#/components/parameters/ProjectId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSessionRequest'
+      responses:
+        '201':
+          description: Session created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionResponse'
+
+  /sessions/{sessionId}/assets:
+    post:
+      tags: [Sessions]
+      summary: Register an input asset for a session
+      operationId: registerSessionAsset
+      parameters:
+        - $ref: '#/components/parameters/SessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterAssetRequest'
+      responses:
+        '201':
+          description: Asset registered
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssetResponse'
+
+  /sessions/{sessionId}/run:
+    post:
+      tags: [Sessions]
+      summary: Execute the configured blueprint for a session
+      operationId: runSession
+      parameters:
+        - $ref: '#/components/parameters/SessionId'
+      responses:
+        '202':
+          description: Session execution started
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionResponse'
+        '409':
+          description: Session cannot run due to missing inputs or incompatible provider capabilities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /sessions/{sessionId}:
+    get:
+      tags: [Sessions]
+      summary: Retrieve session state, provider jobs, and outputs
+      operationId: getSession
+      parameters:
+        - $ref: '#/components/parameters/SessionId'
+      responses:
+        '200':
+          description: Session retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionResponse'
+
+components:
+  parameters:
+    WorkspaceId:
+      name: workspaceId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    ProjectId:
+      name: projectId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    SessionId:
+      name: sessionId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+
+  schemas:
+    ApiMeta:
+      type: object
+      required: [timestamp, requestId]
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        requestId:
+          type: string
+          format: uuid
+
+    ErrorObject:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+
+    ErrorResponse:
+      type: object
+      required: [success, error, meta]
+      properties:
+        success:
+          type: boolean
+          enum: [false]
+        error:
+          $ref: '#/components/schemas/ErrorObject'
+        meta:
+          $ref: '#/components/schemas/ApiMeta'
+
+    WorkspaceTemplate:
+      type: object
+      required: [id, name, slug, enabledNichePackKeys]
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        slug:
+          type: string
+        enabledNichePackKeys:
+          type: array
+          items:
+            type: string
+
+    ProviderProfile:
+      type: object
+      required: [id, providerKey, baseUrl, enabledCapabilities, status]
+      properties:
+        id:
+          type: string
+          format: uuid
+        providerKey:
+          type: string
+          enum: [laozhang, apimart]
+        baseUrl:
+          type: string
+          format: uri
+        enabledCapabilities:
+          type: array
+          items:
+            type: string
+        status:
+          type: string
+          enum: [draft, validated, disabled]
+
+    WorkflowBlueprint:
+      type: object
+      required: [id, name, version, status]
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        version:
+          type: integer
+        status:
+          type: string
+          enum: [draft, active, archived]
+
+    ProjectProfile:
+      type: object
+      required: [id, name, workflowBlueprintId, channelTargets]
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        workflowBlueprintId:
+          type: string
+          format: uuid
+        channelTargets:
+          type: array
+          items:
+            type: string
+
+    ProviderJob:
+      type: object
+      required: [id, providerProfileId, capabilityType, modelKey, status]
+      properties:
+        id:
+          type: string
+          format: uuid
+        providerProfileId:
+          type: string
+          format: uuid
+        capabilityType:
+          type: string
+        modelKey:
+          type: string
+        status:
+          type: string
+          enum: [queued, running, succeeded, failed, cancelled]
+
+    OutputAsset:
+      type: object
+      required: [id, assetType]
+      properties:
+        id:
+          type: string
+          format: uuid
+        assetType:
+          type: string
+        storageKey:
+          type: string
+          nullable: true
+        textContent:
+          type: string
+          nullable: true
+
+    GenerationSession:
+      type: object
+      required: [id, projectProfileId, status]
+      properties:
+        id:
+          type: string
+          format: uuid
+        projectProfileId:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [created, collecting_inputs, analyzing, prompting, generating, review_ready, failed, completed]
+        providerJobs:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProviderJob'
+        outputAssets:
+          type: array
+          items:
+            $ref: '#/components/schemas/OutputAsset'
+
+    CreateWorkspaceRequest:
+      type: object
+      required: [name, slug, enabledNichePackKeys]
+      properties:
+        name:
+          type: string
+        slug:
+          type: string
+        enabledNichePackKeys:
+          type: array
+          items:
+            type: string
+
+    ValidateProviderRequest:
+      type: object
+      required: [providerKey, apiKey, baseUrl]
+      properties:
+        providerKey:
+          type: string
+          enum: [laozhang, apimart]
+        apiKey:
+          type: string
+        baseUrl:
+          type: string
+          format: uri
+
+    UpsertProviderProfileRequest:
+      type: object
+      required: [providerKey, baseUrl, enabledCapabilities]
+      properties:
+        providerKey:
+          type: string
+          enum: [laozhang, apimart]
+        baseUrl:
+          type: string
+          format: uri
+        enabledCapabilities:
+          type: array
+          items:
+            type: string
+        fallbackPriority:
+          type: integer
+          nullable: true
+
+    CreateBlueprintRequest:
+      type: object
+      required: [name, intakeSchema, stepGraph]
+      properties:
+        name:
+          type: string
+        nichePackKey:
+          type: string
+          nullable: true
+        intakeSchema:
+          type: object
+          additionalProperties: true
+        stepGraph:
+          type: object
+          additionalProperties: true
+
+    CreateProjectRequest:
+      type: object
+      required: [name, workflowBlueprintId, channelTargets]
+      properties:
+        name:
+          type: string
+        workflowBlueprintId:
+          type: string
+          format: uuid
+        brandVoice:
+          type: string
+        audience:
+          type: string
+        offerDetails:
+          type: string
+        channelTargets:
+          type: array
+          items:
+            type: string
+
+    CreateSessionRequest:
+      type: object
+      required: [channelTarget]
+      properties:
+        channelTarget:
+          type: string
+        campaignInputs:
+          type: object
+          additionalProperties: true
+
+    RegisterAssetRequest:
+      type: object
+      required: [assetType, fileName, mimeType]
+      properties:
+        assetType:
+          type: string
+        fileName:
+          type: string
+        mimeType:
+          type: string
+        fileSizeBytes:
+          type: integer
+          format: int64
+
+    WorkspaceResponse:
+      type: object
+      required: [success, data, meta]
+      properties:
+        success:
+          type: boolean
+          enum: [true]
+        data:
+          $ref: '#/components/schemas/WorkspaceTemplate'
+        meta:
+          $ref: '#/components/schemas/ApiMeta'
+
+    ProviderValidationResponse:
+      type: object
+      required: [success, data, meta]
+      properties:
+        success:
+          type: boolean
+          enum: [true]
+        data:
+          type: object
+          properties:
+            providerKey:
+              type: string
+            status:
+              type: string
+            enabledCapabilities:
+              type: array
+              items:
+                type: string
+        meta:
+          $ref: '#/components/schemas/ApiMeta'
+
+    ProviderProfileResponse:
+      type: object
+      required: [success, data, meta]
+      properties:
+        success:
+          type: boolean
+          enum: [true]
+        data:
+          $ref: '#/components/schemas/ProviderProfile'
+        meta:
+          $ref: '#/components/schemas/ApiMeta'
+
+    BlueprintResponse:
+      type: object
+      required: [success, data, meta]
+      properties:
+        success:
+          type: boolean
+          enum: [true]
+        data:
+          $ref: '#/components/schemas/WorkflowBlueprint'
+        meta:
+          $ref: '#/components/schemas/ApiMeta'
+
+    ProjectResponse:
+      type: object
+      required: [success, data, meta]
+      properties:
+        success:
+          type: boolean
+          enum: [true]
+        data:
+          $ref: '#/components/schemas/ProjectProfile'
+        meta:
+          $ref: '#/components/schemas/ApiMeta'
+
+    SessionResponse:
+      type: object
+      required: [success, data, meta]
+      properties:
+        success:
+          type: boolean
+          enum: [true]
+        data:
+          $ref: '#/components/schemas/GenerationSession'
+        meta:
+          $ref: '#/components/schemas/ApiMeta'
+
+    AssetResponse:
+      type: object
+      required: [success, data, meta]
+      properties:
+        success:
+          type: boolean
+          enum: [true]
+        data:
+          $ref: '#/components/schemas/OutputAsset'
+        meta:
+          $ref: '#/components/schemas/ApiMeta'

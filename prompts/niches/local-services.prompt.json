@@ -1,0 +1,13 @@
+{
+  "id": "niche.local-services",
+  "version": "1.0.0",
+  "type": "niche",
+  "label": "Local Services",
+  "purpose": "Generate AI-UGC prompts for lead-generation and trust-building service offers.",
+  "required_inputs": ["service_name", "service_area", "target_audience", "offer_details"],
+  "blocks": {
+    "angles": ["problem awareness", "local trust", "fast booking CTA"],
+    "proof_style": ["homeowner testimonial", "service result", "location cue"]
+  },
+  "forbidden_patterns": ["national brand tone", "no local specificity"]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "validate-inputs",
+  "version": "1.0.0",
+  "label": "Validate Inputs",
+  "purpose": "Check workspace, project, session, and asset inputs against schema rules before generation.",
+  "required_inputs": ["workflow_blueprint", "project_profile", "campaign_inputs"],
+  "produces": ["validation_result"],
+  "allowed_prompt_types": ["guard", "transform"],
+  "depends_on": ["build-blueprint"],
+  "supported_providers": ["laozhang", "apimart", "sample-provider"],
+  "retry_policy": { "max_retries": 0 }
+}

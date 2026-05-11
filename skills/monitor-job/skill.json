@@ -1,0 +1,12 @@
+{
+  "id": "monitor-job",
+  "version": "1.0.0",
+  "label": "Monitor Job",
+  "purpose": "Track async provider-job state until completion or failure.",
+  "required_inputs": ["provider_job", "provider_registry"],
+  "produces": ["job_status"],
+  "allowed_prompt_types": ["provider"],
+  "depends_on": ["launch-generation"],
+  "supported_providers": ["laozhang", "apimart", "sample-provider"],
+  "retry_policy": { "max_retries": 3 }
+}

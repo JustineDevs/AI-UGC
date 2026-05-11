@@ -1,0 +1,47 @@
+{
+  "providerKey": "sample-provider",
+  "packageName": "@ai-ugc/provider-sample",
+  "capabilities": [
+    {
+      "providerKey": "sample-provider",
+      "capabilityType": "prompt_generation",
+      "modelKey": "sample-text-model",
+      "supportsAsync": false,
+      "supportsWebhook": false,
+      "inputModes": [
+        "text"
+      ],
+      "outputModes": [
+        "text"
+      ],
+      "notes": "Reference fixture for future third-provider onboarding."
+    },
+    {
+      "providerKey": "sample-provider",
+      "capabilityType": "video_generation",
+      "modelKey": "sample-video-model",
+      "supportsAsync": true,
+      "supportsWebhook": true,
+      "inputModes": [
+        "text",
+        "image"
+      ],
+      "outputModes": [
+        "video"
+      ]
+    }
+  ],
+  "expectedValidationResult": {
+    "providerKey": "sample-provider",
+    "status": "validated",
+    "enabledCapabilities": [
+      "prompt_generation",
+      "video_generation"
+    ],
+    "notes": []
+  },
+  "notes": [
+    "This fixture intentionally uses a non-built-in provider key.",
+    "Runtime support for third-provider registration still requires follow-up app wiring."
+  ]
+}

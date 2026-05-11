@@ -1,0 +1,8 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["validation_result"],
+  "properties": {
+    "validation_result": { "type": "object" }
+  }
+}

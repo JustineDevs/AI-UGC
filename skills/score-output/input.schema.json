@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["prompt_text", "project_profile", "niche", "channel"],
+  "properties": {
+    "prompt_text": { "type": "string" },
+    "project_profile": { "type": "object" },
+    "niche": { "type": "string" },
+    "channel": { "type": "string" }
+  }
+}

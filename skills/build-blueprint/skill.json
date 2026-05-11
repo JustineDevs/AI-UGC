@@ -1,0 +1,12 @@
+{
+  "id": "build-blueprint",
+  "version": "1.0.0",
+  "label": "Build Blueprint",
+  "purpose": "Construct a workflow blueprint from niche, channel, and project constraints.",
+  "required_inputs": ["niche_pack", "project_profile", "channel_targets"],
+  "produces": ["workflow_blueprint"],
+  "allowed_prompt_types": ["niche", "channel", "guard", "template"],
+  "depends_on": [],
+  "supported_providers": ["laozhang", "apimart", "sample-provider"],
+  "retry_policy": { "max_retries": 1 }
+}

@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "id": "analysis-object-present",
+      "path": "source_analysis",
+      "operator": "object",
+      "message": "source analysis object must exist"
+    },
+    {
+      "id": "analysis-summary-present",
+      "path": "source_analysis.summary",
+      "operator": "nonEmptyString",
+      "message": "source analysis summary must be non-empty"
+    }
+  ]
+}

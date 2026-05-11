@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "ESNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ai-ugc/contracts": ["packages/contracts/src/index.ts"],
+      "@ai-ugc/config": ["packages/config/src/index.ts"],
+      "@ai-ugc/domain": ["packages/domain/src/index.ts"],
+      "@ai-ugc/provider-core": ["packages/provider-core/src/index.ts"],
+      "@ai-ugc/provider-laozhang": ["packages/provider-laozhang/src/index.ts"],
+      "@ai-ugc/provider-apimart": ["packages/provider-apimart/src/index.ts"],
+      "@ai-ugc/workflow-engine": ["packages/workflow-engine/src/index.ts"],
+      "@ai-ugc/niche-packs": ["packages/niche-packs/src/index.ts"],
+      "@ai-ugc/ui": ["packages/ui/src/index.ts"]
+    }
+  }
+}

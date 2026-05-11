@@ -1,0 +1,12 @@
+{
+  "id": "analyze-source",
+  "version": "1.0.0",
+  "label": "Analyze Source",
+  "purpose": "Extract reusable structure, hook, pacing, and persuasion cues from reference UGC.",
+  "required_inputs": ["source_asset", "niche", "channel"],
+  "produces": ["source_analysis"],
+  "allowed_prompt_types": ["core", "niche", "channel", "transform"],
+  "depends_on": [],
+  "supported_providers": ["gemini", "laozhang", "apimart"],
+  "retry_policy": { "max_retries": 2 }
+}

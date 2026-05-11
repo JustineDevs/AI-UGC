@@ -1,0 +1,28 @@
+# Ralph Context Snapshot
+
+- Task statement: Implement the architect-identified remaining gaps after the nominal 49/49 task completion.
+- Desired outcome: Remove hardcoded provider onboarding bottlenecks, replace placeholder smoke scripts with meaningful verification, and eliminate misleading "pending/scaffold" claims where the API/runtime can already support the flow.
+- Known facts/evidence:
+  - Previous task ledger reached 49/49 complete, but architect review flagged overclaim risk.
+  - `packages/provider-core/src/capabilities.ts` restricts `ProviderKey` to `"laozhang" | "apimart"`.
+  - `apps/api/src/modules/providers/provider-validation.service.ts` selects adapters via direct imports instead of registry-based resolution.
+  - `tooling/scripts/smoke-*.ts` are placeholder console logs.
+  - `apps/web/src/features/workspace/WorkspaceSetupPage.tsx` still says persistence endpoints are pending even though workspace/project endpoints now exist.
+  - Quickstart and extension docs still explicitly describe some flows as pending or not fully isolated.
+- Constraints:
+  - Preserve currently green install/typecheck/build/lint/test state or improve it.
+  - Keep edits bounded to the remaining architect gaps; avoid broad rewrites.
+  - Use apply_patch for manual file edits.
+- Unknowns/open questions:
+  - Whether provider onboarding should be fully runtime-dynamic or registry-extensible with documented manual registration.
+  - Whether smoke scripts should run against live HTTP endpoints or validate fixture/runtime contracts offline.
+- Likely codebase touchpoints:
+  - `packages/provider-core/**`
+  - `packages/provider-laozhang/**`
+  - `packages/provider-apimart/**`
+  - `apps/api/src/modules/providers/**`
+  - `apps/web/src/features/workspace/**`
+  - `apps/web/src/services/api.ts`
+  - `tooling/scripts/smoke-*.ts`
+  - `docs/extensions.md`
+  - `specs/002-ai-ugc-template-platform/quickstart.md`

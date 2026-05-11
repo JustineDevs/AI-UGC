@@ -1,0 +1,13 @@
+{
+  "id": "core.style",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Style",
+  "purpose": "Describe pacing, camera feel, and creator-native aesthetics.",
+  "required_inputs": ["channel", "content_style"],
+  "blocks": {
+    "visual_style": ["authentic", "fast-paced", "platform-native"],
+    "camera_style": ["UGC realism", "mobile-first framing"]
+  },
+  "forbidden_patterns": ["corporate polish", "overwritten cinematic filler"]
+}

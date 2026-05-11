@@ -1,0 +1,60 @@
+{
+  "workspaceTemplate": {
+    "id": "ws-local-services-apimart",
+    "name": "Local Services Workspace",
+    "slug": "local-services-starter",
+    "defaultProviderProfileId": "provider-apimart-default",
+    "storageProfileId": "storage-local-dev",
+    "enabledNichePackKeys": [
+      "local-service-ads",
+      "organic-social-proof"
+    ],
+    "createdAt": "2026-05-11T00:00:00.000Z",
+    "updatedAt": "2026-05-11T00:00:00.000Z"
+  },
+  "providerProfiles": [
+    {
+      "id": "provider-apimart-default",
+      "workspaceTemplateId": "ws-local-services-apimart",
+      "providerKey": "apimart",
+      "displayName": "APIMart Default",
+      "baseUrl": "https://api.apimart.ai/v1",
+      "apiKeySecretRef": "env:APIMART_API_KEY",
+      "defaultTextModel": "gpt-5",
+      "defaultVideoModel": "sora2",
+      "enabledCapabilities": [
+        "prompt_generation",
+        "video_generation"
+      ],
+      "fallbackPriority": 1,
+      "status": "draft"
+    }
+  ],
+  "projectProfile": {
+    "id": "project-local-demo",
+    "workspaceTemplateId": "ws-local-services-apimart",
+    "workflowBlueprintId": "blueprint-local-services-v1",
+    "name": "HVAC Spring Promotion",
+    "brandVoice": "Trustworthy, local, and fast-moving",
+    "audience": "Homeowners within a 30-mile service radius",
+    "offerDetails": "Same-day estimate with seasonal discount",
+    "claimsPolicy": {
+      "requiredDisclosures": [
+        "availability-varies-by-area"
+      ]
+    },
+    "channelTargets": [
+      "meta-ads",
+      "landing-page"
+    ],
+    "forbiddenTerms": [
+      "always available"
+    ],
+    "assetConstraints": {
+      "requiresBrandGuide": true,
+      "requiresLocationProof": true
+    },
+    "createdAt": "2026-05-11T00:00:00.000Z",
+    "updatedAt": "2026-05-11T00:00:00.000Z"
+  }
+}

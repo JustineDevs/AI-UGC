@@ -1,7 +1,7 @@
 {
-  "name": "ugc-video-generator-frontend",
+  "name": "ai-ugc-frontend",
   "version": "1.0.0",
-  "description": "Frontend SPA for UGC Advertisement Video Generator",
+  "description": "Frontend workspace for AI-UGC, a configurable AI user-generated content platform for niche-specific campaign creation.",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -79,10 +79,10 @@ function App() {
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <h1 className="text-2xl font-bold text-gray-900">
-            Viral2Viral - UGC Video Cloner [POC]
+            AI-UGC
           </h1>
           <p className="text-sm text-gray-600 mt-1">
-            Recreate successful UGC ads for your product using AI
+            Configurable AI user-generated content workflows for niche-specific campaigns
           </p>
         </div>
       </header>
@@ -345,7 +345,7 @@ function App() {
       <footer className="bg-white border-t mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <p className="text-center text-sm text-gray-500">
-            Viral2Viral - UGC Video Cloner [POC]
+            AI-UGC
           </p>
         </div>
       </footer>

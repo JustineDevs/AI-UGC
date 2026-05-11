@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "id": "job-status-present",
+      "path": "job_status.status",
+      "operator": "nonEmptyString",
+      "message": "job status must be present"
+    }
+  ]
+}

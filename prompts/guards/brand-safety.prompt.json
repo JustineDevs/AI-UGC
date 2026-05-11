@@ -1,0 +1,9 @@
+{
+  "id": "guard.brand-safety",
+  "version": "1.0.0",
+  "type": "guard",
+  "label": "Brand Safety",
+  "purpose": "Prevent off-brand language and disallowed framing.",
+  "required_inputs": ["forbidden_terms", "brand_voice"],
+  "forbidden_patterns": ["brand-unsafe jokes", "off-tone slang", "forbidden vocabulary"]
+}

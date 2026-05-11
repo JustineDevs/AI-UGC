@@ -1,0 +1,11 @@
+{
+  "id": "transform.blueprint-to-prompt",
+  "version": "1.0.0",
+  "type": "transform",
+  "label": "Blueprint To Prompt",
+  "purpose": "Convert blueprint step/module configuration into prompt assembly instructions.",
+  "required_inputs": ["workflow_blueprint"],
+  "blocks": {
+    "transform_rules": ["respect enabled steps", "preserve order", "apply moderation/output policy"]
+  }
+}

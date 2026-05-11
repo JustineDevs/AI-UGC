@@ -1,0 +1,7 @@
+{
+  "steps": [
+    { "id": "collect-export-inputs", "description": "Collect provider job, output asset, and scores." },
+    { "id": "normalize-export-bundle", "description": "Normalize into one export bundle." },
+    { "id": "return-export-bundle", "description": "Return bundle for review, publish, or handoff." }
+  ]
+}

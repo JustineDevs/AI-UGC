@@ -1,8 +1,8 @@
 {
-  "name": "ugc-video-generator-backend",
+  "name": "ai-ugc-backend",
   "version": "1.0.0",
-  "description": "Backend API for UGC Advertisement Video Generator",
-  "author": "",
+  "description": "Backend API for AI-UGC, a configurable platform for generating niche-specific AI user-generated content workflows and outputs.",
+  "author": "AI-UGC",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

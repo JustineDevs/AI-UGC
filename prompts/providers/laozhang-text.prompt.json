@@ -1,0 +1,11 @@
+{
+  "id": "provider.laozhang-text",
+  "version": "1.0.0",
+  "type": "provider",
+  "label": "LaoZhang Text Formatting",
+  "purpose": "Format text-generation prompts for LaoZhang-compatible endpoints.",
+  "required_inputs": ["prompt_text", "text_model"],
+  "blocks": {
+    "format_rules": ["OpenAI-compatible chat payload", "single final prompt string"]
+  }
+}

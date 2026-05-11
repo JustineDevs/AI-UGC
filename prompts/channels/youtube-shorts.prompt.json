@@ -1,0 +1,11 @@
+{
+  "id": "channel.youtube-shorts",
+  "version": "1.0.0",
+  "type": "channel",
+  "label": "YouTube Shorts",
+  "purpose": "Adapt prompts to short educational or product storytelling on Shorts.",
+  "required_inputs": ["duration_seconds"],
+  "blocks": {
+    "timing": ["clear opening promise", "structured payoff", "watch-retention pacing"]
+  }
+}

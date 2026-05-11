@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "id": "workflow-blueprint-object-present",
+      "path": "workflow_blueprint",
+      "operator": "object",
+      "message": "workflow blueprint must exist"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "guard.anti-generic",
+  "version": "1.0.0",
+  "type": "guard",
+  "label": "Anti Generic",
+  "purpose": "Force specific, non-slop output structure.",
+  "required_inputs": ["target_audience", "offer_details"],
+  "forbidden_patterns": ["generic hype", "vague benefits", "AI-sounding filler"]
+}

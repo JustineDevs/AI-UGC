@@ -1,10 +1,24 @@
-# viral2viral - UGC Advertisement Video Generator
+# AI-UGC
 
-An AI-powered application that analyzes successful UGC (User-Generated Content) advertisement videos and generates new promotional videos for your products based on the same style and techniques.
+AI-UGC is a configurable AI user-generated content platform for analyzing winning source content and generating niche-specific marketing, advertising, and brand videos.
+
+## Migration Status
+
+This repository is in the middle of a migration from the older `backend/` + `frontend/` layout into an AI-UGC monorepo with:
+
+- `apps/api`
+- `apps/web`
+- shared packages for provider adapters, workflow logic, contracts, and niche packs
+
+The older runtime folders still exist during the transition. For the monorepo migration path, start with:
+
+- [specs/002-ai-ugc-template-platform/quickstart.md](specs/002-ai-ugc-template-platform/quickstart.md)
+- [docs/extensions.md](docs/extensions.md)
+- [tooling/fixtures/README.md](tooling/fixtures/README.md)
 
 ## Overview
 
-viral2viral allows marketers to upload a reference UGC advertisement video, extracts key insights using AI (visual style, messaging tone, pacing, engagement techniques), and then generates a brand-new advertisement video for their product while maintaining the successful elements of the original.
+AI-UGC allows operators, marketers, and creators to upload reference UGC content, extract key insights with AI, and generate tailored derivative assets for products, offers, and campaigns while preserving the strongest structural patterns from the original content.
 
 **[Watch Demo on YouTube](https://youtu.be/Ylw-e1AayGE)**
 
@@ -45,29 +59,27 @@ viral2viral allows marketers to upload a reference UGC advertisement video, extr
 ## Project Structure
 
 ```
-viral2viral/
-├── backend/              # NestJS API server
-│   └── src/
-│       ├── modules/      # Feature modules
-│       │   ├── analysis/ # Video analysis with Gemini
-│       │   ├── generation/ # Video generation orchestration
-│       │   ├── prompt/   # Prompt generation & moderation
-│       │   ├── product/  # Product information management
-│       │   ├── sessions/ # Session state management
-│       │   ├── storage/  # AWS S3 integration
-│       │   └── video/    # Video upload handling
-│       ├── common/       # Shared utilities & types
-│       └── config/       # Configuration management
-├── frontend/             # React SPA
-│   └── src/
-│       ├── components/   # UI components
-│       ├── hooks/        # Custom React hooks
-│       ├── services/     # API client
-│       └── types/        # TypeScript definitions
-├── scripts/              # Testing & utility scripts
-│   └── output/          # Example generated videos
-└── specs/               # Spec-First development docs
-    └── 001-ugc-video-generator/
+AI-UGC/
+├── apps/
+│   ├── api/                  # Target NestJS API app
+│   └── web/                  # Target React/Vite workspace app
+├── packages/
+│   ├── provider-core/        # Shared provider contracts and routing
+│   ├── provider-laozhang/    # LaoZhang adapter
+│   ├── provider-apimart/     # APIMart adapter
+│   ├── niche-packs/          # Built-in and custom niche-pack entry points
+│   ├── workflow-engine/      # Workflow composition utilities
+│   ├── contracts/            # Shared API/domain contracts
+│   ├── domain/               # Workspace, profile, and session entities
+│   └── config/               # Shared environment/config loading
+├── tooling/
+│   └── fixtures/             # Example workspace, niche, and provider fixtures
+├── docs/
+│   └── extensions.md         # Maintainer-facing extension guide
+├── backend/                  # Older API surface retained during migration
+├── frontend/                 # Older SPA surface retained during migration
+└── specs/
+    └── 002-ai-ugc-template-platform/
 ```
 
 ## Example Output
@@ -76,6 +88,17 @@ See example generated videos in [`scripts/output/`](scripts/output/):
 - `generated-26.11.25.mp4` - Generated advertisement video
 
 ## Getting Started
+
+For the monorepo migration path, use [specs/002-ai-ugc-template-platform/quickstart.md](specs/002-ai-ugc-template-platform/quickstart.md).
+
+Additional migration docs:
+
+- [packages/niche-packs/README.md](packages/niche-packs/README.md)
+- [packages/provider-core/README.md](packages/provider-core/README.md)
+- [tooling/fixtures/workspaces/ecommerce-laozhang.workspace-template.json](tooling/fixtures/workspaces/ecommerce-laozhang.workspace-template.json)
+- [tooling/fixtures/workspaces/local-services-apimart.workspace-template.json](tooling/fixtures/workspaces/local-services-apimart.workspace-template.json)
+
+The older setup flow is still documented below while the migration is in progress.
 
 ### Prerequisites
 - Node.js 18+
@@ -87,11 +110,7 @@ See example generated videos in [`scripts/output/`](scripts/output/):
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/IuriiD/viral2viral.git
-cd viral2viral
-```
+1. Clone the repository into a local folder of your choice.
 
 2. Install dependencies:
 ```bash
@@ -145,7 +164,7 @@ npm run dev
 
 ## API Documentation
 
-See [specs/001-ugc-video-generator/contracts/openapi.yaml](specs/001-ugc-video-generator/contracts/openapi.yaml) for full API specification.
+See [specs/002-ai-ugc-template-platform/contracts/openapi.yaml](specs/002-ai-ugc-template-platform/contracts/openapi.yaml) for the active AI-UGC platform contract.
 
 ## Development
 
@@ -160,4 +179,4 @@ UNLICENSED - Private project
 
 ## Contributing
 
-This project follows spec-first development practices. See [specs/001-ugc-video-generator/](specs/001-ugc-video-generator/) for detailed specifications and development plans.
+This project follows spec-first development practices. See [specs/002-ai-ugc-template-platform/](specs/002-ai-ugc-template-platform/) for the active AI-UGC transformation artifacts.

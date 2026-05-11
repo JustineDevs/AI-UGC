@@ -1,0 +1,12 @@
+{
+  "id": "niche.organic-social-proof",
+  "version": "1.0.0",
+  "type": "niche",
+  "label": "Organic Social Proof",
+  "purpose": "Generate low-friction social-proof content that feels organic rather than ad-shaped.",
+  "required_inputs": ["product_name", "proof_type", "channel"],
+  "blocks": {
+    "angles": ["seen everywhere", "honest recommendation", "subtle proof"]
+  },
+  "forbidden_patterns": ["hard-sell CTA", "obvious ad script"]
+}

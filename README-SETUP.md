@@ -1,4 +1,8 @@
-# UGC Video Generator - Setup & Run Guide
+# AI-UGC - Setup & Run Guide
+
+This repository uses a monorepo layout with `apps/api`, `apps/web`, and shared
+`packages/*`. The older `backend/` and `frontend/` directories are still
+present as reference sources during the migration.
 
 ## Prerequisites
 
@@ -10,12 +14,12 @@
 
 ### 1. Configure Environment Variables
 
-**Backend** (`backend/.env`):
+**API / Root** (`.env` or `apps/api/.env`):
 
-You need to add your actual credentials to `backend/.env`:
+You need to add your actual credentials to the root `.env`:
 
 ```bash
-# Edit backend/.env and add these values:
+# Edit the root `.env` and add these values:
 
 # Server
 PORT=3000
@@ -32,8 +36,16 @@ GOOGLE_GEMINI_API_KEY=your_actual_gemini_api_key_here
 # CORS
 CORS_ORIGIN=http://localhost:5173
 
-# Optional for now (needed for Phase 3+)
-# LAOZHANG_API_KEY=your_laozhang_api_key
+# Provider selection
+DEFAULT_PROVIDER=laozhang
+
+# LaoZhang
+LAOZHANG_API_KEY=your_laozhang_api_key
+LAOZHANG_API_BASE_URL=https://api.laozhang.ai/v1
+
+# APIMart
+APIMART_API_KEY=your_apimart_api_key
+APIMART_API_BASE_URL=https://api.apimart.ai/v1
 ```
 
 **Frontend** (`frontend/.env`):
@@ -43,16 +55,15 @@ VITE_API_BASE_URL=http://localhost:3000/api
 VITE_ENV=development
 ```
 
-### 2. Start Backend Server
+### 2. Start API Server
 
-Once you've configured `backend/.env` with your actual credentials:
+Once you've configured the root `.env` with your actual credentials:
 
 ```bash
-cd backend
-npm run start:dev
+pnpm --filter @ai-ugc/api dev
 ```
 
-The backend will start on **http://localhost:3000**
+The API will start on **http://localhost:3000**
 
 You should see:
 ```
@@ -61,14 +72,13 @@ You should see:
 [Nest] INFO [NestApplication] Nest application successfully started
 ```
 
-### 3. Start Frontend Dev Server (in a new terminal)
+### 3. Start Web Dev Server (in a new terminal)
 
 ```bash
-cd frontend
-npm run dev
+pnpm --filter @ai-ugc/web dev
 ```
 
-The frontend will start on **http://localhost:5173**
+The web app will start on **http://localhost:5173**
 
 ### 4. Test the Application
 

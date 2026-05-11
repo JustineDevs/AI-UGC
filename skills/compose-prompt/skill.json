@@ -1,0 +1,12 @@
+{
+  "id": "compose-prompt",
+  "version": "1.0.0",
+  "label": "Compose Prompt",
+  "purpose": "Assemble a provider-ready AI-UGC prompt from analysis, blueprint, profile, and channel.",
+  "required_inputs": ["source_analysis", "project_profile", "workflow_blueprint", "channel", "provider"],
+  "produces": ["prompt_text", "prompt_metadata"],
+  "allowed_prompt_types": ["core", "niche", "channel", "guard", "provider", "template", "transform"],
+  "depends_on": ["analyze-source", "build-blueprint", "route-provider"],
+  "supported_providers": ["laozhang", "apimart", "sample-provider"],
+  "retry_policy": { "max_retries": 2, "fallback_skill": "revise-output" }
+}

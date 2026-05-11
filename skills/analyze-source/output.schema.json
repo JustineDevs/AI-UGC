@@ -1,0 +1,8 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["source_analysis"],
+  "properties": {
+    "source_analysis": { "type": "object" }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "transform.analysis-to-prompt",
+  "version": "1.0.0",
+  "type": "transform",
+  "label": "Analysis To Prompt",
+  "purpose": "Translate source-content analysis into reusable prompt structure.",
+  "required_inputs": ["source_analysis", "workflow_blueprint"],
+  "blocks": {
+    "transform_rules": ["extract pacing", "extract structure", "map to niche modules"]
+  }
+}

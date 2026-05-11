@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["quality_scores", "revision_recommendations"],
+  "properties": {
+    "quality_scores": { "type": "object" },
+    "revision_recommendations": { "type": "array", "items": { "type": "string" } }
+  }
+}

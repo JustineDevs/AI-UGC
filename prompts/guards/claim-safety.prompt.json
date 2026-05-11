@@ -1,0 +1,9 @@
+{
+  "id": "guard.claim-safety",
+  "version": "1.0.0",
+  "type": "guard",
+  "label": "Claim Safety",
+  "purpose": "Prevent unsupported claims or prohibited promise structures.",
+  "required_inputs": ["claims_policy"],
+  "forbidden_patterns": ["guaranteed results", "medical cure language", "unsupported transformation claims"]
+}

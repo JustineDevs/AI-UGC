@@ -1,0 +1,7 @@
+{
+  "steps": [
+    { "id": "load-scoring-prompts", "description": "Load scoring prompt blocks." },
+    { "id": "evaluate-quality-dimensions", "description": "Evaluate output across quality dimensions." },
+    { "id": "return-score-package", "description": "Return structured scores and revision suggestions." }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "validate-claims",
+  "version": "1.0.0",
+  "label": "Validate Claims",
+  "purpose": "Check generated prompts against claims policy and prohibited phrasing.",
+  "required_inputs": ["prompt_text", "claims_policy"],
+  "produces": ["claims_validation"],
+  "allowed_prompt_types": ["guard", "scoring"],
+  "depends_on": ["compose-prompt"],
+  "supported_providers": ["laozhang", "apimart", "sample-provider"],
+  "retry_policy": { "max_retries": 1, "fallback_skill": "revise-output" }
+}

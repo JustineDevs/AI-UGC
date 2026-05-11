@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "id": "export-bundle-present",
+      "path": "export_bundle",
+      "operator": "object",
+      "message": "export bundle must exist"
+    },
+    {
+      "id": "export-provider-job-id-present",
+      "path": "export_bundle.providerJobId",
+      "operator": "nonEmptyString",
+      "message": "export bundle must include provider job id"
+    }
+  ]
+}

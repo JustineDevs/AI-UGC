@@ -1,0 +1,11 @@
+{
+  "id": "channel.meta-ads",
+  "version": "1.0.0",
+  "type": "channel",
+  "label": "Meta Ads",
+  "purpose": "Adapt prompts to paid social ad framing on Meta properties.",
+  "required_inputs": ["duration_seconds", "cta_policy"],
+  "blocks": {
+    "timing": ["clear product value early", "CTA clarity", "thumb-stop visuals"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["provider_job", "provider_registry"],
+  "properties": {
+    "provider_job": { "type": "object" },
+    "provider_registry": { "type": "object" }
+  }
+}

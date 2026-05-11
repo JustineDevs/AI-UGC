@@ -1,0 +1,11 @@
+{
+  "id": "channel.landing-page",
+  "version": "1.0.0",
+  "type": "channel",
+  "label": "Landing Page Video",
+  "purpose": "Adapt prompts to embedded conversion-supporting videos on landing pages.",
+  "required_inputs": ["duration_seconds", "offer_details"],
+  "blocks": {
+    "timing": ["slightly slower pacing", "clarity over trendiness", "trust-building flow"]
+  }
+}

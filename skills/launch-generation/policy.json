@@ -1,0 +1,17 @@
+{
+  "rules": [
+    {
+      "id": "provider-job-present",
+      "path": "provider_job",
+      "operator": "object",
+      "message": "provider job must exist"
+    },
+    {
+      "id": "provider-job-succeeded",
+      "path": "provider_job.status",
+      "operator": "equals",
+      "value": "succeeded",
+      "message": "provider job must be marked succeeded"
+    }
+  ]
+}

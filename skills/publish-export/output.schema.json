@@ -1,0 +1,8 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["export_bundle"],
+  "properties": {
+    "export_bundle": { "type": "object" }
+  }
+}

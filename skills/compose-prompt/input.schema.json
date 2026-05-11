@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["source_analysis", "project_profile", "workflow_blueprint", "channel", "provider"],
+  "properties": {
+    "source_analysis": { "type": "object" },
+    "project_profile": { "type": "object" },
+    "workflow_blueprint": { "type": "object" },
+    "channel": { "type": "string" },
+    "provider": { "type": "string" }
+  }
+}

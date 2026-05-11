@@ -1,0 +1,9 @@
+{
+  "steps": [
+    { "id": "validate-semantic-inputs", "description": "Validate all semantic inputs." },
+    { "id": "load-template-and-order", "description": "Load template and block order from the workflow blueprint." },
+    { "id": "apply-content-blocks", "description": "Apply core, niche, channel, and guard blocks." },
+    { "id": "apply-provider-formatting", "description": "Apply provider formatting." },
+    { "id": "return-prompt-and-metadata", "description": "Return final prompt text plus metadata." }
+  ]
+}

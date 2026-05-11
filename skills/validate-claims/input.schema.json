@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["prompt_text", "claims_policy"],
+  "properties": {
+    "prompt_text": { "type": "string" },
+    "claims_policy": { "type": "object" }
+  }
+}

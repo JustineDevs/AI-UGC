@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "skills": [
+    "analyze-source",
+    "build-blueprint",
+    "compose-prompt",
+    "validate-inputs",
+    "validate-claims",
+    "route-provider",
+    "launch-generation",
+    "monitor-job",
+    "score-output",
+    "revise-output",
+    "publish-export"
+  ]
+}

@@ -68,7 +68,7 @@ export class GenerationService {
     const generatedVideo: GeneratedVideo = {
       generatedVideoId,
       s3Key,
-      s3Bucket: 'viral2viral-videos', // From config
+      s3Bucket: 'ai-ugc-videos', // From config
       fileName: 'generated.mp4',
       mimeType: 'video/mp4',
       status: GenerationStatus.PENDING,

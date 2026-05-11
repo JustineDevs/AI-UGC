@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["niche_pack", "project_profile", "channel_targets"],
+  "properties": {
+    "niche_pack": { "type": "object" },
+    "project_profile": { "type": "object" },
+    "channel_targets": { "type": "array", "items": { "type": "string" } }
+  }
+}

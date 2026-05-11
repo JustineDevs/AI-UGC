@@ -1,0 +1,11 @@
+{
+  "id": "score.brand-alignment",
+  "version": "1.0.0",
+  "type": "scoring",
+  "label": "Brand Alignment Score",
+  "purpose": "Judge whether the output matches brand voice and audience.",
+  "required_inputs": ["prompt_text", "brand_voice", "audience"],
+  "output_rules": {
+    "scores": ["0-100 alignment", "drift notes", "repair hints"]
+  }
+}

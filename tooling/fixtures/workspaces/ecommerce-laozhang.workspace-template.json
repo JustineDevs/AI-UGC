@@ -1,0 +1,60 @@
+{
+  "workspaceTemplate": {
+    "id": "ws-ecommerce-laozhang",
+    "name": "Ecommerce Starter Workspace",
+    "slug": "ecommerce-starter",
+    "defaultProviderProfileId": "provider-laozhang-default",
+    "storageProfileId": "storage-local-dev",
+    "enabledNichePackKeys": [
+      "ecommerce-product-ads",
+      "creator-testimonial-ads"
+    ],
+    "createdAt": "2026-05-11T00:00:00.000Z",
+    "updatedAt": "2026-05-11T00:00:00.000Z"
+  },
+  "providerProfiles": [
+    {
+      "id": "provider-laozhang-default",
+      "workspaceTemplateId": "ws-ecommerce-laozhang",
+      "providerKey": "laozhang",
+      "displayName": "LaoZhang Default",
+      "baseUrl": "https://api.laozhang.ai/v1",
+      "apiKeySecretRef": "env:LAOZHANG_API_KEY",
+      "defaultTextModel": "gpt-5",
+      "defaultVideoModel": "sora-2",
+      "enabledCapabilities": [
+        "prompt_generation",
+        "video_generation"
+      ],
+      "fallbackPriority": 1,
+      "status": "validated",
+      "lastValidatedAt": "2026-05-11T00:00:00.000Z"
+    }
+  ],
+  "projectProfile": {
+    "id": "project-ecommerce-demo",
+    "workspaceTemplateId": "ws-ecommerce-laozhang",
+    "workflowBlueprintId": "blueprint-ecommerce-v1",
+    "name": "Supplements Launch",
+    "brandVoice": "Direct, energetic, and proof-driven",
+    "audience": "Health-conscious shoppers aged 24-40",
+    "offerDetails": "First-order discount with fast shipping",
+    "claimsPolicy": {
+      "disallowedClaims": [
+        "medical-cure"
+      ]
+    },
+    "channelTargets": [
+      "tiktok",
+      "meta-ads"
+    ],
+    "forbiddenTerms": [
+      "guaranteed cure"
+    ],
+    "assetConstraints": {
+      "requiresProductImage": true
+    },
+    "createdAt": "2026-05-11T00:00:00.000Z",
+    "updatedAt": "2026-05-11T00:00:00.000Z"
+  }
+}

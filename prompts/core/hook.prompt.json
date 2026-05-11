@@ -1,0 +1,13 @@
+{
+  "id": "core.hook",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Hook",
+  "purpose": "Define the opening attention grab for short-form AI-UGC.",
+  "required_inputs": ["pain_point", "desire"],
+  "blocks": {
+    "hook_style": ["show payoff early", "state pain fast", "interrupt scrolling"],
+    "timing": ["0-3 seconds", "first beat matters"]
+  },
+  "forbidden_patterns": ["slow intro", "contextless filler"]
+}

@@ -1,0 +1,17 @@
+{
+  "rules": [
+    {
+      "id": "selected-provider-present",
+      "path": "selected_provider",
+      "operator": "nonEmptyString",
+      "message": "selected provider must be set"
+    },
+    {
+      "id": "provider-reasoning-matches",
+      "path": "provider_reasoning.selectedProvider",
+      "operator": "equalsField",
+      "comparePath": "selected_provider",
+      "message": "provider reasoning must match selected provider"
+    }
+  ]
+}

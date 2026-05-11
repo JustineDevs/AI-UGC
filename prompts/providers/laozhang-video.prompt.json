@@ -1,0 +1,11 @@
+{
+  "id": "provider.laozhang-video",
+  "version": "1.0.0",
+  "type": "provider",
+  "label": "LaoZhang Video Formatting",
+  "purpose": "Format video-generation prompts and payloads for LaoZhang.",
+  "required_inputs": ["prompt_text", "video_model"],
+  "blocks": {
+    "format_rules": ["OpenAI-compatible payload", "text plus image-aware prompt formatting"]
+  }
+}

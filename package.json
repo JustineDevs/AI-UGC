@@ -1,15 +1,29 @@
 {
-  "name": "zilly",
+  "name": "ai-ugc-monorepo",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "format": "turbo run format",
+    "db:migrate": "pnpm --filter @ai-ugc/api db:migrate",
+    "provider:validate": "pnpm --filter @ai-ugc/api provider:validate"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "ai-ugc",
+    "ugc",
+    "ai-video",
+    "ads"
+  ],
+  "author": "AI-UGC",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@google/genai": "^1.30.0"
+  "description": "AI-UGC is a configurable AI user-generated content platform for analyzing winning source content and generating niche-specific marketing, advertising, and brand videos.",
+  "devDependencies": {
+    "turbo": "^2.0.14",
+    "typescript": "^5.5.4"
   }
 }

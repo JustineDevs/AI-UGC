@@ -1,0 +1,11 @@
+{
+  "id": "provider.apimart-video",
+  "version": "1.0.0",
+  "type": "provider",
+  "label": "APIMart Video Formatting",
+  "purpose": "Format async video-generation prompts and payloads for APIMart.",
+  "required_inputs": ["prompt_text", "video_model"],
+  "blocks": {
+    "format_rules": ["async task payload", "provider-capability-aware output expectations"]
+  }
+}

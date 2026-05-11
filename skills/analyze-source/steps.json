@@ -1,0 +1,8 @@
+{
+  "steps": [
+    { "id": "validate-source-input", "description": "Validate source input." },
+    { "id": "detect-channel-and-niche", "description": "Detect channel and niche context." },
+    { "id": "extract-structure-signals", "description": "Extract hook, pacing, scene structure, proof, and CTA patterns." },
+    { "id": "return-analysis-output", "description": "Return normalized analysis output." }
+  ]
+}

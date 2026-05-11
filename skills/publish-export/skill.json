@@ -1,0 +1,12 @@
+{
+  "id": "publish-export",
+  "version": "1.0.0",
+  "label": "Publish Export",
+  "purpose": "Package the final prompt, metadata, and provider output for downstream delivery or review.",
+  "required_inputs": ["provider_job", "quality_scores", "output_asset"],
+  "produces": ["export_bundle"],
+  "allowed_prompt_types": ["scoring", "provider"],
+  "depends_on": ["monitor-job", "score-output"],
+  "supported_providers": ["laozhang", "apimart", "sample-provider"],
+  "retry_policy": { "max_retries": 0 }
+}

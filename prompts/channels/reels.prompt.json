@@ -1,0 +1,11 @@
+{
+  "id": "channel.reels",
+  "version": "1.0.0",
+  "type": "channel",
+  "label": "Reels",
+  "purpose": "Adapt prompts to short, creator-native vertical video for reels surfaces.",
+  "required_inputs": ["duration_seconds"],
+  "blocks": {
+    "timing": ["visual payoff first", "caption and face-led flow"]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "rules": [
+    {
+      "id": "claims-validation-present",
+      "path": "claims_validation",
+      "operator": "object",
+      "message": "claims validation result must exist"
+    },
+    {
+      "id": "claims-violations-array",
+      "path": "claims_validation.violations",
+      "operator": "arrayMin",
+      "value": 0,
+      "message": "claims violations must be an array"
+    }
+  ]
+}

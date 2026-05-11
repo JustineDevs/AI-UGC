@@ -1,0 +1,12 @@
+{
+  "id": "niche.info-products",
+  "version": "1.0.0",
+  "type": "niche",
+  "label": "Info Products",
+  "purpose": "Generate authority-led AI-UGC prompts for digital education and coaching products.",
+  "required_inputs": ["offer_details", "audience_problem", "target_audience"],
+  "blocks": {
+    "angles": ["knowledge gap", "outcome framing", "credibility proof"]
+  },
+  "forbidden_patterns": ["empty guru hype", "vague transformation"]
+}

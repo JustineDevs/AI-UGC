@@ -1,0 +1,16 @@
+{
+  "id": "niche.ecommerce-product-ads",
+  "version": "1.0.0",
+  "type": "niche",
+  "label": "Ecommerce Product Ads",
+  "purpose": "Generate high-conversion product-led AI-UGC ad prompts.",
+  "required_inputs": ["product_name", "product_description", "target_audience", "offer_details"],
+  "blocks": {
+    "angles": ["pain to payoff", "demo-first", "testimonial conversion"],
+    "proof_style": ["before-after", "demo", "social proof"]
+  },
+  "forbidden_patterns": ["generic unboxing only", "weak offer framing"],
+  "output_rules": {
+    "must_feel": ["specific", "conversion-minded", "native to feed"]
+  }
+}

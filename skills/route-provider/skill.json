@@ -1,0 +1,12 @@
+{
+  "id": "route-provider",
+  "version": "1.0.0",
+  "label": "Route Provider",
+  "purpose": "Choose the best provider for the requested capability using routing policy and capability data.",
+  "required_inputs": ["capability_type", "routing_policy", "provider_registry"],
+  "produces": ["selected_provider", "provider_reasoning"],
+  "allowed_prompt_types": ["provider"],
+  "depends_on": [],
+  "supported_providers": ["laozhang", "apimart", "sample-provider"],
+  "retry_policy": { "max_retries": 0 }
+}

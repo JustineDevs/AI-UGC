@@ -1,0 +1,27 @@
+# Ralph Context Snapshot
+
+- Task statement: Implement the remaining work needed to push AI-UGC toward a production-grade state, including the explicitly called-out gaps around skill execution contracts, runtime depth, web maturity, output quality, verification depth, and production readiness.
+- Desired outcome: Reduce or eliminate the highest-risk remaining gaps in persistence, orchestration rigor, provider/runtime hardening, test depth, and operational readiness while preserving the current green build/test baseline.
+- Known facts/evidence:
+  - The repo now has a working monorepo structure with `apps/api`, `apps/web`, `packages/*`, `prompts/`, `skills/`, and `schemas/`.
+  - `prompts/` and `skills/` are present and partially wired into `packages/workflow-engine` and `apps/api`.
+  - The skill chain is now contract-aware with schema checks, parsed policy rules, parsed steps, and step-ID enforcement.
+  - Previous closeout gaps around provider registry, workspace API persistence, and smoke scripts were addressed.
+  - Prior recorded verification is green for install/typecheck/build/test; app-level lint passed earlier.
+- Constraints:
+  - Must keep the current workspace functional and avoid destructive resets.
+  - Use `apply_patch` for manual edits.
+  - Network access is restricted; only already-installable/local verification paths are reliable.
+  - Architect verification is still required before honest final closure.
+- Unknowns/open questions:
+  - How far “10/10 production grade” can be meaningfully advanced in a single pass without overclaiming.
+  - Which production-readiness gaps are still most material after the current semantic/runtime improvements.
+  - Whether live persistence, deeper observability, and stronger smoke/e2e coverage can be hardened without changing the product scope.
+- Likely codebase touchpoints:
+  - `apps/api/src/**`
+  - `apps/web/src/**`
+  - `packages/workflow-engine/**`
+  - `packages/provider-core/**`
+  - `tooling/scripts/**`
+  - `docs/**`
+  - `specs/002-ai-ugc-template-platform/**`

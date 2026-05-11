@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/skill-io.schema.json",
+  "type": "object",
+  "required": ["prompt_text", "revision_recommendations", "workflow_blueprint"],
+  "properties": {
+    "prompt_text": { "type": "string" },
+    "revision_recommendations": { "type": "array", "items": { "type": "string" } },
+    "workflow_blueprint": { "type": "object" }
+  }
+}

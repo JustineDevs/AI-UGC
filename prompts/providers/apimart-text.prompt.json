@@ -1,0 +1,11 @@
+{
+  "id": "provider.apimart-text",
+  "version": "1.0.0",
+  "type": "provider",
+  "label": "APIMart Text Formatting",
+  "purpose": "Format text-generation prompts for APIMart-compatible endpoints.",
+  "required_inputs": ["prompt_text", "text_model"],
+  "blocks": {
+    "format_rules": ["OpenAI-compatible chat payload", "provider-neutral prompt text"]
+  }
+}

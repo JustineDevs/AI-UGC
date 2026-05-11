@@ -1,0 +1,8 @@
+{
+  "steps": [
+    { "id": "validate-niche-and-project", "description": "Validate niche pack and project inputs." },
+    { "id": "load-channel-and-guard-constraints", "description": "Load channel and guard constraints." },
+    { "id": "build-step-graph", "description": "Build step graph and prompt module order." },
+    { "id": "return-versioned-blueprint", "description": "Return a versioned workflow blueprint." }
+  ]
+}

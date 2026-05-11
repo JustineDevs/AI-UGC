@@ -1,0 +1,12 @@
+{
+  "id": "core.proof",
+  "version": "1.0.0",
+  "type": "core",
+  "label": "Proof",
+  "purpose": "Anchor the content in believable evidence, demonstration, or testimonial.",
+  "required_inputs": ["proof_type", "supporting_claims"],
+  "blocks": {
+    "proof_style": ["testimonial", "demo", "specific benefit evidence"]
+  },
+  "forbidden_patterns": ["empty praise", "unsupported claims"]
+}
