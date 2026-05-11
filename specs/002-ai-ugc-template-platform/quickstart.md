@@ -4,7 +4,7 @@
 
 Stand up the transformed monorepo locally, choose either LaoZhang or APIMart as the active provider gateway, and boot a niche-specific AI-UGC workspace.
 
-## Planned Monorepo Layout
+## Monorepo Layout
 
 ```text
 apps/api
@@ -111,12 +111,6 @@ Maintainer-facing extension documentation lives in:
 - `packages/niche-packs/README.md`
 - `packages/provider-core/README.md`
 
-Important current limitation:
-
-- new bundled niche packs fit the current package-level registration model
-- new third-party providers are registry-resolvable, but still require explicit
-  bootstrap registration plus live environment validation
-
 ## Provider Validation Checks
 
 Run provider health checks from the API app:
@@ -133,13 +127,15 @@ Expected outcomes:
 - Chat/prompt connectivity succeeds
 - Video capability is either validated or marked unsupported with a clear message
 
-## Migration Notes From Current Repo
+## Architecture Notes
 
-- `backend/` becomes `apps/api`
-- `frontend/` becomes `apps/web`
-- shared `common/types` move into `packages/contracts` and `packages/domain`
-- LaoZhang-specific logic in `prompt.service.ts` and `generation.service.ts` moves into provider packages
-- in-memory `SessionService` behavior is replaced by durable metadata persistence for template/project/session state
+- `apps/api` is the active API entrypoint
+- `apps/web` is the active web entrypoint
+- shared contracts and domain entities live in `packages/contracts` and
+  `packages/domain`
+- provider-specific runtime behavior is routed through shared provider packages
+- durable metadata persistence replaces process-local storage for workspace,
+  project, session, provider-job, and output-asset state
 
 ## Verification Checklist
 

@@ -1,6 +1,7 @@
 # Extension Surfaces
 
-This document defines the current maintainer-facing extension path for the AI-UGC monorepo migration work.
+This document defines the current maintainer-facing extension path for the
+AI-UGC monorepo.
 
 The goal is narrow: add or adjust niche packs and provider adapters without
 spreading one-off logic across unrelated app code. This guide documents the
@@ -127,14 +128,15 @@ The package seams are still ahead of the runtime in a few places:
 - Fixture-backed smoke scripts validate contracts and registry behavior offline,
   but they do not replace a live deployed-environment verification pass.
 
-Those gaps are expected during the migration. A new third-party provider is now
-registry-resolvable, but production onboarding still requires explicit bootstrap
-registration and live environment validation.
+Those gaps are current platform limits. A new third-party provider is
+registry-resolvable, but production onboarding still requires explicit
+bootstrap registration and live environment validation.
 
 ## Maintainer Checklist
 
 - Add or modify package-level registration first.
 - Keep docs and fixtures in the same change as the extension surface update.
 - Reuse the existing pack/adaptor object patterns before inventing new abstractions.
-- Do not add per-niche or per-provider branching in unrelated app modules unless the migration plan explicitly calls for it.
+- Do not add per-niche or per-provider branching in unrelated app modules
+  unless an explicit architecture decision calls for it.
 - When adding a new provider beyond the built-ins, verify all hardcoded provider unions are removed or intentionally updated.

@@ -1,6 +1,6 @@
-# Fixture Scaffolding
+# Fixture Catalog
 
-This directory contains human-readable example fixtures for the AI-UGC monorepo migration.
+This directory contains human-readable example fixtures for the AI-UGC platform.
 
 Current scope:
 
@@ -8,10 +8,13 @@ Current scope:
 - `niche-packs/` holds declarative niche-pack examples
 - `providers/` holds provider adapter capability and validation examples
 
-These files are not wired into an automated seeding command yet. They exist so maintainers can:
+These files are not wired into an automated seeding command. They exist so
+maintainers can:
 
 - validate documentation examples against a concrete payload
-- prepare future fixture-based tests
-- keep niche-pack and provider-extension discussions grounded in repo-native shapes
+- exercise extension and smoke-test flows against repo-native payloads
+- keep niche-pack and provider-extension discussions grounded in repo-native
+  shapes
 
-When the runtime and tests are expanded, these fixtures should become the source material for contract and registration smoke coverage rather than being replaced by ad hoc examples.
+These fixtures are the canonical source material for extension examples and
+smoke coverage.

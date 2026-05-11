@@ -38,7 +38,7 @@ const views: Array<{ id: AppView; label: string; description: string }> = [
     id: "workflow",
     label: "Workflow Studio",
     description:
-      "Continue the current generation flow while migration proceeds.",
+      "Run the reference-analysis and generation workflow in the monorepo UI.",
   },
 ];
 

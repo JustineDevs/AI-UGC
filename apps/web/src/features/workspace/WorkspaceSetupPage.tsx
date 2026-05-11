@@ -173,7 +173,7 @@ export function WorkspaceSetupPage() {
               User Story 1
             </p>
             <h1 className="mt-3 text-3xl sm:text-4xl font-semibold">
-              Workspace Setup Scaffold
+              Workspace Setup
             </h1>
             <p className="mt-4 text-slate-200 max-w-2xl">
               Create the workspace template, choose a bundled or custom niche,
@@ -294,7 +294,7 @@ export function WorkspaceSetupPage() {
         <section className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="text-lg font-semibold text-gray-900">
-              Save scaffold
+              Save workspace configuration
             </h2>
             <p className="text-sm text-gray-600 mt-1">
               Saves locally for recovery and attempts API persistence for the

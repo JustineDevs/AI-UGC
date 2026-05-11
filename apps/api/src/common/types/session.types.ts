@@ -26,8 +26,8 @@ export enum SessionStatus {
 }
 
 /**
- * Session represents a complete workflow instance
- * Stored in-memory on the backend
+ * Session represents a complete workflow instance used by the interactive
+ * upload/analyze/generate flow.
  */
 export interface Session {
   /** Unique identifier (UUID) */

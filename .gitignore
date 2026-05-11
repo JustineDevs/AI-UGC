@@ -8,6 +8,8 @@ scripts/landing-page/
 
 # Dependencies
 node_modules/
+package-lock.json
+**/package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -48,3 +50,5 @@ pnpm-lock.yaml
 # Temporary files
 *.tmp
 *.temp
+.data/
+apps/api/.data/

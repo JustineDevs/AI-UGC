@@ -1,8 +1,8 @@
 /**
  * SessionService
  *
- * In-memory session storage and management using singleton pattern.
- * Holds all workflow state without database persistence (POC requirement).
+ * In-memory session storage and management for the interactive upload/analyze
+ * workflow that still operates outside the monorepo metadata repositories.
  */
 
 import { Injectable, Scope } from "@nestjs/common";

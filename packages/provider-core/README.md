@@ -33,7 +33,7 @@ Capability entries currently describe:
 
 ## Current Built-In Providers
 
-The migration currently ships with:
+The platform currently ships with:
 
 - LaoZhang
 - APIMart
@@ -69,4 +69,5 @@ the shared registry rather than direct adapter selection.
 - Fixture-backed smoke scripts validate registry behavior offline, but do not
   replace a live deployed-environment verification pass.
 
-See `docs/extensions.md` for the broader maintainer workflow and current migration caveats.
+See `docs/extensions.md` for the broader maintainer workflow and current
+extension caveats.

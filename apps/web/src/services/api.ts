@@ -1,7 +1,7 @@
 /**
  * API Client Service
  *
- * Centralized HTTP client for backend API communication.
+ * Centralized HTTP client for API communication.
  * Provides base configuration and error handling.
  */
 

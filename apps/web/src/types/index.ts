@@ -1,7 +1,7 @@
 /**
  * Frontend TypeScript Interfaces
  *
- * Type definitions matching backend API structures.
+ * Type definitions matching API contract structures.
  */
 
 // Session types
